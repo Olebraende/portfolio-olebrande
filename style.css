@@ -1,0 +1,930 @@
+/* ---------------------------------------------------------
+   Grunnstil: marg, padding, box-sizing, scroll-behavior, osv.
+---------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --background: rgb(24, 24, 24);
+  --second-background: rgb(20, 20, 20);
+  --linear-gradient: linear-gradient(to top left, #e46147 25%, #800000 100%);
+  --text-color: #ffffff;
+  --text-color-contrast: #e0e0e0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text-color);
+  animation: fadeIn 0.9s ease-out;
+  transition: ease-in-out 0.3s;
+}
+
+/* ---------------------------------------------------------
+   Navigasjon (sticky + mobilvisning)
+---------------------------------------------------------- */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 1em 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  background-color: rgba(15, 15, 15, 1);
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+nav ul a {
+  color: var(--text-color-contrast);
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+}
+
+nav ul a:hover {
+  opacity: 1;
+  color: var(--text-color);
+}
+
+.logo {
+  font-size: 2em;
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+/* Mobilmeny */
+#menu {
+  display: none;
+  color: white;
+  font-size: 3em;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.9);
+    text-align: center;
+  }
+
+  .links.active {
+    display: flex;
+  }
+}
+
+.logo {
+  font-size: 2em;
+  color: white;
+  font-weight: 800;
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid rgb(255, 82, 82);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+.btn:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+span {
+  background: var(--linear-gradient);
+  background-clip: text;
+  color: transparent;
+}
+
+#menu {
+  color: white;
+  font-size: 3em;
+  display: none;
+}
+
+/* ---------------------------------------------------------
+   Seksjoner (f.eks. #home, #skill, #project, #about)
+---------------------------------------------------------- */
+section {
+  min-height: 50vh;
+  padding: 5% 15%;
+  overflow: hidden;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  gap: 2em;
+  color: white;
+}
+
+#home img {
+  width: 18vw;
+  border-radius: 50%;
+  margin-top: 3em;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1em;
+  max-width: 600px;
+}
+
+.info-box h1,
+.info-box h3,
+.info-box p {
+  opacity: 0.8;
+  color: var(--text-color-contrast);
+  cursor: default;
+}
+
+.info-box h1 {
+  font-size: 4em;
+  font-weight: 900;
+}
+
+.info-box h1:hover {
+  opacity: 2.8;
+}
+
+.info-box h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.info-box h3:hover {
+  opacity: 2.8;
+}
+
+.info-box p {
+  opacity: 0.7;
+  color: var(--text-color-contrast);
+}
+
+.btn-box {
+  display: flex;
+  gap: 1em;
+}
+
+.btn-box .btn:nth-of-type(2) {
+  background-color: white;
+  color: var(--background);
+}
+
+.btn-box .btn:nth-of-type(2):hover {
+  background-color: var(--background);
+  color: white;
+}
+
+/* ---------------------------------------------------------
+   Scrollbar-stil
+---------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: lightgray;
+}
+
+/* ---------------------------------------------------------
+   #skill-seksjon
+---------------------------------------------------------- */
+#skill {
+  background-color: var(--second-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+
+#skill img {
+  width: 30vw;
+  border-radius: 1em;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2em;
+}
+
+.skill-box h2 {
+  font-size: 4em;
+  cursor: default;
+  font-weight: 900;
+  opacity: 0.8;
+}
+
+.skill-box h2:hover {
+  font-size: 4em;
+  opacity: 2.8;
+}
+
+.skill-box p {
+  color: white;
+  opacity: 0.8;
+}
+
+.skills {
+  display: flex;
+  text-align: left;
+  gap: 10em;
+}
+
+.skills ul {
+  font-size: 1.3em;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  opacity: 0.7;
+  align-items: baseline;
+}
+
+.skills ul li span {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.4em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.skills ul li span:hover {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------------------
+   #project-seksjon
+---------------------------------------------------------- */
+#project {
+  background-color: var(--second-background);
+  padding: 5% 15%;
+  color: white;
+  text-align: center;
+  gap: 1em;
+}
+
+#project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 4em;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+#project-header:hover {
+  opacity: 2.8;
+  cursor: default;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.project-box {
+  background-color: var(--second-background);
+  border: 2px solid var(--text-color-contrast);
+  border-radius: 0.5em;
+  padding: 2em;
+  text-align: center;
+  max-width: 400px;
+  flex: 1 1 calc(33.333% - 2em); /* Fleksibel bredde med 3 kolonner */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.project-box h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.project-box p {
+  font-size: 1.2em;
+  color: var(--text-color-contrast);
+  margin-bottom: 1.5em;
+}
+
+.project-box .btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.8em 1.5em;
+  font-size: 1.2em;
+  color: white;
+  background-color: var(--background);
+  border: 2px solid var(--text-color-contrast);
+  border-radius: 0.5em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-box .btn:hover {
+  background-color: var(--text-color);
+  color: var(--background);
+}
+
+/* ---------------------------------------------------------
+   Bokser generelt (.box) - brukes i prosjekter, about etc.
+---------------------------------------------------------- */
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2em;
+  border: 2px solid var(--text-color-contrast);
+  border-radius: 0.5em;
+  background-color: var(--second-background);
+  overflow: hidden;
+}
+
+.box:hover {
+  border-color: var(--text-color);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box-about { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2em;
+  border: 2px solid var(--text-color-contrast);
+  border-radius: 0.5em;
+  background-color: var(--second-background);
+  overflow: hidden;
+}
+
+.box-about:hover {
+  border-color: var(--text-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  border-radius: 0.5em;
+  object-fit: contain;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  padding: 2em;
+}
+
+.projects-grid .box {
+  background-color: var(--second-background);
+  padding: 1.5em;
+  text-align: center;
+  border: 2px solid var(--text-color-contrast);
+  border-radius: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+.projects-grid .box:hover {
+  border-color: var(--text-color);
+}
+
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0.5em;
+  object-fit: contain;
+  margin-bottom: 1em;
+}
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.2em;
+  color: var(--text-color);
+  text-decoration: none;
+  border: 2px solid var(--text-color-contrast);
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+  transition: transform 0.2s ease-in-out;
+  margin: 1em;
+}
+
+.github-btn i {
+  font-size: 1.5em;
+}
+
+.github-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--text-color-contrast);
+  color: var(--background);
+}
+
+.box p {
+  opacity: 0.8;
+}
+
+.box h1 {
+  font-size: 2em;
+  font-weight: 900;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.box h1:hover {
+  opacity: 2.8;
+}
+
+.box img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 0.5em;
+  display: block;
+  object-fit: contain;
+  transition: 0.3s ease-in-out;
+}
+
+.box:hover img {
+  transform: scale(1.04) translate(0%, 0%);
+}
+
+/* ---------------------------------------------------------
+   #about-seksjon
+---------------------------------------------------------- */
+#about {
+  background-color: var(--second-background);
+  padding: 5% 15%;
+  color: white;
+  text-align: center;
+  gap: 1em;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+#about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 4em;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+
+#about-header:hover {
+  opacity: 2.8;
+  cursor: default;
+}
+
+.about h2 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 900;
+}
+
+.about p {
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+/* ---------------------------------------------------------
+   Tilbake til toppen-knapp (#back-to-top)
+---------------------------------------------------------- */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#back-to-top.visible {
+  display: block;
+  opacity: 1;
+}
+
+#back-to-top:not(.visible) {
+  opacity: 0;
+}
+
+/* ---------------------------------------------------------
+   Kontakt-del (#contact)
+---------------------------------------------------------- */
+#contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5em; /* Redusert gap */
+  background-color: var(--background);
+  width: 100%;
+  padding: 3em 10%; /* Redusert padding */
+  overflow: hidden;
+}
+
+.col-left,
+.col-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.col-box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.col-box i {
+  font-size: 0.9em;
+  color: white;
+}
+
+.col-box span {
+  font-size: 1em;
+  color: white;
+}
+
+.col-right {
+  max-width: 500px;
+}
+
+.col-right span {
+  font-size: 1em;
+  opacity: 0.8;
+  cursor: default;
+}
+
+.col-right span:hover {
+  opacity: 2.8;
+}
+
+.col-right .social-icons {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1em;
+}
+
+.col-right .social-icons i {
+  font-size: 2em;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: white;
+}
+
+.social-icons a {
+  color: var(--linear-gradient);
+}
+
+/* ---------------------------------------------------------
+   Ekstra knappestil for prosjekt-knapp (btn2)
+---------------------------------------------------------- */
+.btn2 {
+  padding: 0.5em 1em;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid rgb(255, 82, 82);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn2:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+.btn2:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------
+   Animasjoner (fadeIn, etc.)
+---------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+/* ---------------------------------------------------------
+   Tastaturfokus (WCAG) - outline på a, button etc.
+---------------------------------------------------------- */
+a:focus,
+button:focus {
+  outline: 2px solid var(--linear-gradient);
+  outline-offset: 2px;
+}
+
+nav ul a:focus,
+.btn:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------------------------------------------------
+   MEDIA QUERIES
+---------------------------------------------------------- */
+@media (max-width: 1200px) {
+  nav .btn{
+    display: none;
+  }
+  #home h3 {
+    font-size: 1.8em;
+  }
+  #home img {
+    width: 24vw;
+  }
+  #skill {
+    flex-direction: column;
+  }
+  #skill img {
+    width: 30vw;
+  }
+  #skill h1 {
+    font-size: 2em;
+  }
+  #skill ul {
+    font-size: 1em;
+  }
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 4.5em;
+  }
+  nav {
+    display: flex;
+    padding: 1em 30%;
+  }
+  nav .btn{
+    display: none;
+  }
+  span{
+    font-size: 0.5em;
+    text-align: center;
+  }
+  #contact {
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em 5%;
+  }
+  .col-left,
+  .col-right {
+    width: 100%;
+    text-align: center;
+  }
+  .col-left {
+    order: 2;
+  }
+  .col-right {
+    order: 1;
+  }
+  .col-right .social-icons {
+    justify-content: center;
+  }
+  .project-box h2{
+    font-size: 1.2em;
+  }
+  .project-box p{
+    font-size: 1em;
+  }
+  .skill-box{
+    align-items: center;
+  }
+  .skills{
+    flex-direction: row;
+    gap: 3em;
+  }
+  #skill img{
+    width: 50vw;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2em;
+  }
+  #contact {
+    padding: 1em 2%;
+  }
+  .col-left,
+  .col-right {
+    align-items: center;
+    text-align: center;
+  }
+  .col-right span {
+    font-size: 1.2em;
+  }
+  .col-right p {
+    font-size: 1em;
+  }
+  .social-icons i {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  #contact {
+    padding: 1em 1%;
+  }
+  .col-left,
+  .col-right {
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+  }
+  .col-right span {
+    font-size: 1em;
+  }
+  .col-right p {
+    font-size: 0.9em;
+  }
+  .social-icons i {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  #contact {
+    padding: 0.5em 1%;
+  }
+  .col-left,
+  .col-right {
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+  }
+  .col-right span {
+    font-size: 0.9em;
+  }
+  .col-right p {
+    font-size: 0.8em;
+  }
+  .social-icons i {
+    font-size: 1em;
+  }
+}
