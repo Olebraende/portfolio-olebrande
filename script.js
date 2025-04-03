@@ -244,14 +244,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const header = document.createElement("h1");
     header.id = "project-header";
     header.className = "header";
-  
+
     const headerSpan = document.createElement("span");
-    headerSpan.textContent = "Mine Prosjekter";
+    headerSpan.textContent = "Prosjekter";
     header.appendChild(headerSpan);
-  
+
     const projectContainer = document.createElement("div");
     projectContainer.className = "project-container";
-  
+
     const projects = [
       {
         title: "React Router Project",
@@ -277,37 +277,43 @@ document.addEventListener("DOMContentLoaded", () => {
         img: "./pics/fjell-kino.png",
         link: "https://olem-kodehode4.github.io/Fjell-Kino/",
       },
+      {
+        title: "Krønsji – Moderne Nettside for Lokal Restaurant",
+        desc: "Dette prosjektet er en stilren og brukervennlig nettside utviklet for restauranten Krønsji. Nettsiden gir besøkende informasjon om menyen, ingredienser, allergener og restaurantens konsept, med et design som reflekterer den sprø og smakfulle opplevelsen Krønsji tilbyr.",
+        img: "./pics/kroensji.png",
+        link: "https://krønsji.no",
+      },
     ];
-  
+
     projects.forEach(({ title, desc, img, link }) => {
       const projectBox = document.createElement("div");
       projectBox.className = "project-box";
-  
+
       const projectTitle = document.createElement("h2");
       projectTitle.textContent = title;
-  
+
       const projectDesc = document.createElement("p");
       projectDesc.textContent = desc;
-  
+
       const projectImg = document.createElement("img");
       projectImg.src = img;
       projectImg.alt = title;
-  
+
       const projectLink = document.createElement("a");
       projectLink.href = link;
       projectLink.target = "_blank";
       projectLink.textContent = "Se Live Demo";
       projectLink.className = "btn";
-  
+
       projectBox.appendChild(projectTitle);
       projectBox.appendChild(projectDesc);
       projectBox.appendChild(projectImg);
       projectBox.appendChild(projectLink);
       projectContainer.appendChild(projectBox);
     });
-  
+
     createSection("project", [header, projectContainer]);
-  } 
+  }
 
   /**
    * Oppretter seksjonen #about - Om meg.
