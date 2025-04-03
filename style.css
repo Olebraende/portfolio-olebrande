@@ -85,27 +85,6 @@ nav ul a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  #menu {
-    display: block;
-  }
-
-  .links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(15, 15, 15, 0.9);
-    text-align: center;
-  }
-
-  .links.active {
-    display: flex;
-  }
-}
-
 .logo {
   font-size: 2em;
   color: white;
@@ -144,6 +123,7 @@ span {
   background: var(--linear-gradient);
   background-clip: text;
   color: transparent;
+  font-weight: 900;
 }
 
 #menu {
@@ -428,7 +408,7 @@ section {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
-.box-about { 
+.box-about {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -605,6 +585,11 @@ section {
   opacity: 0;
 }
 
+#back-to-top i {
+  font-size: 1.5em;
+  color: var(--text-color);
+}
+
 /* ---------------------------------------------------------
    Kontakt-del (#contact)
 ---------------------------------------------------------- */
@@ -774,7 +759,7 @@ img {
    MEDIA QUERIES
 ---------------------------------------------------------- */
 @media (max-width: 1200px) {
-  nav .btn{
+  nav .btn {
     display: none;
   }
   #home h3 {
@@ -807,6 +792,22 @@ img {
 }
 
 @media (max-width: 768px) {
+  #menu {
+    display: block;
+  }
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.9);
+    text-align: center;
+  }
+  .links.active {
+    display: flex;
+  }
   .logo {
     font-size: 4.5em;
   }
@@ -814,10 +815,10 @@ img {
     display: flex;
     padding: 1em 30%;
   }
-  nav .btn{
+  nav .btn {
     display: none;
   }
-  span{
+  span {
     font-size: 0.5em;
     text-align: center;
   }
@@ -840,20 +841,20 @@ img {
   .col-right .social-icons {
     justify-content: center;
   }
-  .project-box h2{
+  .project-box h2 {
     font-size: 1.2em;
   }
-  .project-box p{
+  .project-box p {
     font-size: 1em;
   }
-  .skill-box{
+  .skill-box {
     align-items: center;
   }
-  .skills{
+  .skills {
     flex-direction: row;
     gap: 3em;
   }
-  #skill img{
+  #skill img {
     width: 50vw;
   }
 }
