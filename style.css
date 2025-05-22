@@ -281,7 +281,7 @@ section {
   display: flex;
   flex-direction: column;
   color: white;
-  opacity: 0.7;
+  opacity: 0.9;
   align-items: baseline;
 }
 
@@ -296,7 +296,7 @@ section {
 
 .skills ul li span:hover {
   color: var(--text-color);
-  opacity: 0.8;
+  opacity: 1.8;
 }
 
 /* ---------------------------------------------------------
