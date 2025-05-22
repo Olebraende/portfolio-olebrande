@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * Oppretter navigasjonen (header).
    */
   function createNav() {
-    console.log("✅ createNav() kjører!");
 
     const body = document.body;
     const navElement = document.createElement("nav");
@@ -254,10 +253,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const projects = [
       {
-        title: "React Router Project",
-        desc: "Et prosjekt som viser hvordan React Router fungerer.",
-        img: "./pics/react-router-project.jpg",
-        link: "https://olebraende.github.io/react-router-project/",
+        title: "Krønsji – Moderne Nettside for Lokal Restaurant",
+        desc: "Dette prosjektet er en stilren og brukervennlig nettside utviklet for restauranten Krønsji. Nettsiden gir besøkende informasjon om menyen, ingredienser, allergener og restaurantens konsept, med et design som reflekterer den sprø og smakfulle opplevelsen Krønsji tilbyr.",
+        img: "./pics/kroensji.png",
+        link: "https://krønsji.no",
+      },
+      {
+        title: "Fjell Kino – Filmoversikt og Tilgjengelighetsfokusert Nettside",
+        desc: "Dette prosjektet er en moderne og responsiv nettside utviklet i React, bygget for det fiktive selskapet Fjell Kino. Nettsiden gir brukerne mulighet til å bla gjennom tilgjengelige filmer, kommende filmer, bestille billetter og kontakte kinoen.",
+        img: "./pics/fjell-kino.png",
+        link: "https://olem-kodehode4.github.io/Fjell-Kino/",
       },
       {
         title: "Juleoppgave",
@@ -270,18 +275,6 @@ document.addEventListener("DOMContentLoaded", () => {
         desc: "Et enkelt pong-spill laget med HTML, CSS og JavaScript.",
         img: "./pics/pong-game.png",
         link: "https://olebraende.github.io/Pong-Game/",
-      },
-      {
-        title: "Fjell Kino – Filmoversikt og Tilgjengelighetsfokusert Nettside",
-        desc: "Dette prosjektet er en moderne og responsiv nettside utviklet i React, bygget for det fiktive selskapet Fjell Kino. Nettsiden gir brukerne mulighet til å bla gjennom tilgjengelige filmer, kommende filmer, bestille billetter og kontakte kinoen.",
-        img: "./pics/fjell-kino.png",
-        link: "https://olem-kodehode4.github.io/Fjell-Kino/",
-      },
-      {
-        title: "Krønsji – Moderne Nettside for Lokal Restaurant",
-        desc: "Dette prosjektet er en stilren og brukervennlig nettside utviklet for restauranten Krønsji. Nettsiden gir besøkende informasjon om menyen, ingredienser, allergener og restaurantens konsept, med et design som reflekterer den sprø og smakfulle opplevelsen Krønsji tilbyr.",
-        img: "./pics/kroensji.png",
-        link: "https://krønsji.no",
       },
     ];
 
@@ -334,12 +327,13 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         title: "",
         desc: [
-          "Hei, jeg heter Ole Brænde, en engasjert og nysgjerrig utvikler som brenner for å skape løsninger som gir verdi. " +
-            "Med interesse for hele spekteret av utvikling er jeg alltid motivert til å lære mer og ta i bruk nye verktøy og teknologier.",
-          "Det som driver meg, er muligheten til å løse problemer gjennom effektiv kode og innovative løsninger. " +
+            "Hei, jeg heter Ole Brænde, en engasjert og nysgjerrig utvikler som brenner for å skape løsninger som gir verdi. " +
+            "Med interesse for hele spekteret av utvikling er jeg alltid motivert til å lære mer og ta i bruk nye verktøy og teknologier." +
+            "Det som driver meg, er muligheten til å løse problemer gjennom effektiv kode og innovative løsninger. " +
             "Jeg er detaljorientert, samtidig som jeg har et sterkt fokus på brukervennlighet og ytelse. " +
-            "Ved å holde meg oppdatert på moderne teknologi, sørger jeg for å levere løsninger som er både robuste og fremtidsrettede.",
-          "Jeg trives i team der jeg kan samarbeide tett med andre utviklere, dele kunnskap og kontinuerlig forbedre både meg selv og prosjektene jeg jobber med. " +
+            "Jeg er alltid på utkikk etter nye utfordringer og muligheter for å utvikle meg selv. " +
+            "Ved å holde meg oppdatert på moderne teknologi, sørger jeg for å levere løsninger som er både robuste og fremtidsrettede." +
+            "Jeg trives i team der jeg kan samarbeide tett med andre utviklere, dele kunnskap og kontinuerlig forbedre både meg selv og prosjektene jeg jobber med. " +
             "Enten det handler om frontend, backend eller noe midt imellom, er jeg klar til å ta utfordringen og bidra.",
         ],
       },
