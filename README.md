@@ -1,42 +1,16 @@
-# Portfolio - Ole Brænde
+# React + Vite
 
-## Forbedringer og tillegg
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### Generelle forbedringer
-- **Responsivt design**: Porteføljen er designet for å være responsiv og fungerer godt på både desktop og mobile enheter.
-- **Sticky navigasjonsmeny**: Navigasjonsmenyen forblir på toppen av siden når du blar nedover, noe som gjør det enkelt å navigere.
-- **Animasjoner**: Subtile animasjoner er lagt til for å forbedre brukeropplevelsen, inkludert fade-in og slide-in effekter.
+Currently, two official plugins are available:
 
-### Nye seksjoner
-- **Hjem**: En introduksjonsseksjon med et bilde og en kort beskrivelse.
-- **Skill**: En seksjon som beskriver ferdighetene mine, inkludert API-ene jeg har jobbet med, og gir en kort biografi.
-- **Prosjekter**: En seksjon som viser frem noen av prosjektene mine med beskrivelser og bilder.
-- **Om meg**: En seksjon som inneholder informasjon om utdanning og erfaring.
-- **Kontakt**: En seksjon med kontaktinformasjon og lenker til sosiale medier.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Brukte JavaScript-teknikker
+## React Compiler
 
-### Dynamisk innholdsopprettelse
-- **Document Object Model (DOM) Manipulation**: Jeg har brukt DOM-manipulasjon for å dynamisk opprette og legge til HTML-innhold i porteføljen. Dette gjør det enkelt å vedlikeholde og oppdatere innholdet uten å måtte endre HTML-filen direkte.
-- **Event Listeners**: Jeg har brukt event listeners for å legge til interaktivitet, som for eksempel å håndtere klikk på navigasjonsmenyen og knapper.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Animasjoner
-- **CSS Animations**: Jeg har brukt CSS-animasjoner for å legge til fade-in og slide-in effekter på forskjellige elementer. Dette gir en mer engasjerende brukeropplevelse.
+## Expanding the ESLint configuration
 
-### Responsivt design
-- **Media Queries**: Jeg har brukt media queries i CSS for å sikre at porteføljen ser bra ut på forskjellige skjermstørrelser, inkludert desktop, tablet og mobil.
-
-### Tilgjengelighet
-- **ARIA Attributes**: Jeg har brukt ARIA-attributter for å forbedre tilgjengeligheten til porteføljen. Dette inkluderer å legge til `role` og `aria-labelledby` attributter på seksjoner og navigasjonselementer.
-
-## Fremtidige forbedringer
-- **Legge til API**: Implementere et API som fungerer stabilt.
-- **Legge til bilder og lenker**: Fullføre alle seksjoner med relevante bilder og lenker.
-- **Forbedre tilgjengelighet**: Gjøre ytterligere forbedringer for å sikre at porteføljen er tilgjengelig for alle brukere.
-- **Optimalisere ytelse**: Optimalisere koden og ressursene for raskere lastetider.
-
-## Nåværende status
-Porteføljen er under utvikling, og flere funksjoner og innhold vil bli lagt til før den endelige innleveringen. Bilder og lenker er foreløpig ikke inkludert, og API-integrasjon er under vurdering.
-
-## Konklusjon
-Denne porteføljen er designet for å være enkel å navigere, responsiv og tilgjengelig. Jeg har brukt moderne webteknologier og beste praksis for å sikre en god brukeropplevelse. Hvis du har noen spørsmål eller tilbakemeldinger, vennligst kontakt meg via kontaktinformasjonen i porteføljen.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

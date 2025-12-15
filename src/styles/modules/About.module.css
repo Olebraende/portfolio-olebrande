@@ -1,0 +1,46 @@
+.about {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background-secondary);
+}
+
+.title {
+  font-size: var(--font-3xl);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.content p {
+  font-size: var(--font-lg);
+  line-height: 1.8;
+  color: var(--color-text-muted);
+  opacity: 0.9;
+  text-align: left;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+  .about {
+    padding: var(--space-2xl) 0;
+  }
+
+  .title {
+    font-size: var(--font-2xl);
+    margin-bottom: var(--space-lg);
+  }
+
+  .content p {
+    font-size: var(--font-base);
+  }
+}

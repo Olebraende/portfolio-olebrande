@@ -1,0 +1,125 @@
+.projects {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background-secondary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  font-size: var(--font-3xl);
+  font-weight: 900;
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  font-size: var(--font-lg);
+  color: var(--color-text-muted);
+  opacity: 0.8;
+}
+
+/* Filter Buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.filterBtn {
+  padding: var(--space-sm) var(--space-lg);
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background-color: var(--color-background);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.filterBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.filterBtn.active {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  color: var(--color-text);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(228, 97, 71, 0.3);
+}
+
+/* Projects Grid */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-xl);
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* No Results Message */
+.noResults {
+  text-align: center;
+  font-size: var(--font-lg);
+  color: var(--color-text-muted);
+  padding: var(--space-2xl) 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1024px) {
+  .projectsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: var(--space-2xl) 0;
+  }
+
+  .header {
+    margin-bottom: var(--space-xl);
+  }
+
+  .title {
+    font-size: var(--font-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-base);
+  }
+
+  .filters {
+    margin-bottom: var(--space-xl);
+  }
+
+  .filterBtn {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-sm);
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .filters {
+    gap: var(--space-xs);
+  }
+
+  .filterBtn {
+    font-size: var(--font-xs);
+    padding: var(--space-xs) var(--space-sm);
+  }
+}

@@ -1,0 +1,166 @@
+.footer {
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-2xl) 0;
+  margin-top: var(--space-3xl);
+}
+
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2xl);
+}
+
+/* Left Column */
+.colLeft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.colBox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text-muted);
+  font-size: var(--font-sm);
+}
+
+.colBox i {
+  font-size: var(--font-base);
+}
+
+/* Right Column */
+.colRight {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  text-align: right;
+}
+
+.colRight h3 {
+  font-size: var(--font-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.colRight p {
+  color: var(--color-text-muted);
+  font-size: var(--font-sm);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Social Icons */
+.socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  transition: all var(--transition-base);
+}
+
+.socialIcons a:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.socialIcons i {
+  font-size: var(--font-xl);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Tablet (< 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+
+  .colLeft {
+    order: 2;
+    align-items: center;
+  }
+
+  .colRight {
+    order: 1;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--space-xl) 0;
+    margin-top: var(--space-2xl);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+    gap: var(--space-lg);
+  }
+
+  .colRight h3 {
+    font-size: var(--font-base);
+  }
+
+  .colRight p {
+    font-size: var(--font-xs);
+  }
+
+  .socialIcons a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialIcons i {
+    font-size: var(--font-lg);
+  }
+}
+
+/* Small mobile (< 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--space-lg) 0;
+  }
+
+  .container {
+    gap: var(--space-md);
+  }
+
+  .colBox {
+    font-size: var(--font-xs);
+  }
+
+  .socialIcons {
+    gap: var(--space-sm);
+  }
+}
