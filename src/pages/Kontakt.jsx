@@ -1,30 +1,30 @@
-import { useState } from 'react';
-import { useLanguage } from '../hooks/useLanguage';
-import { usePageMeta } from '../utils/usePageMeta';
-import Container from '../components/layout/Container';
-import Toast from '../components/ui/Toast';
-import styles from '../styles/modules/Kontakt.module.css';
+import { useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
+import { usePageMeta } from "../utils/usePageMeta";
+import Container from "../components/layout/Container";
+import Toast from "../components/ui/Toast";
+import styles from "../styles/modules/Kontakt.module.css";
 
 const Kontakt = () => {
   const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showToast, setShowToast] = useState(false);
-  const [toastMessage, setToastMessage] = useState('');
+  const [toastMessage, setToastMessage] = useState("");
 
-  const email = 'olembrande.work@gmail.com';
+  const email = "olembrande.work@gmail.com";
 
   // Set page meta tags
   usePageMeta(
     `${t.contact.title} | Ole Brænde`,
-    language === 'no'
-      ? 'Ta kontakt for et uforpliktende tilbud. Jeg hjelper deg med webutvikling, hosting og vedlikehold.'
-      : 'Get in touch for a no-obligation quote. I help you with web development, hosting and maintenance.'
+    language === "no"
+      ? "Ta kontakt for et uforpliktende tilbud. Jeg hjelper deg med webutvikling, hosting og vedlikehold."
+      : "Get in touch for a no-obligation quote. I help you with web development, hosting and maintenance."
   );
 
   const handleChange = (e) => {
@@ -39,11 +39,11 @@ const Kontakt = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
-          'form-name': 'contact',
+          "form-name": "contact",
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
@@ -54,7 +54,7 @@ const Kontakt = () => {
       if (response.ok) {
         setToastMessage(t.contact.success);
         setShowToast(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         setToastMessage(t.contact.error);
         setShowToast(true);
@@ -90,11 +90,11 @@ const Kontakt = () => {
             {/* Contact Form */}
             <div className={styles.formWrapper}>
               <h2 className={styles.formTitle}>{t.contact.formTitle}</h2>
-              
+
               <form
                 name="contact"
                 method="POST"
-                action="/kontakt"
+                action="/"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
@@ -102,7 +102,7 @@ const Kontakt = () => {
               >
                 {/* Netlify form fields */}
                 <input type="hidden" name="form-name" value="contact" />
-                <p style={{ display: 'none' }}>
+                <p style={{ display: "none" }}>
                   <label>
                     Don't fill this out: <input name="bot-field" />
                   </label>
@@ -170,7 +170,7 @@ const Kontakt = () => {
             {/* Contact Info */}
             <div className={styles.info}>
               <h3 className={styles.infoTitle}>{t.contact.infoTitle}</h3>
-              
+
               <div className={styles.infoItem}>
                 <i className="bx bx-envelope"></i>
                 <div>
@@ -196,7 +196,7 @@ const Kontakt = () => {
                   <i className="bx bxl-linkedin"></i>
                   {t.contact.linkedinLabel}
                 </a>
-                
+
                 <a
                   href="https://github.com/Olebraende"
                   target="_blank"
@@ -214,10 +214,7 @@ const Kontakt = () => {
 
       {/* Toast Notification */}
       {showToast && (
-        <Toast
-          message={toastMessage}
-          onClose={() => setShowToast(false)}
-        />
+        <Toast message={toastMessage} onClose={() => setShowToast(false)} />
       )}
     </div>
   );
