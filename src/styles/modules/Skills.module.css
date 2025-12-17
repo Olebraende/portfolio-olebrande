@@ -28,6 +28,36 @@
   margin: 0 auto;
 }
 
+.skillsGrid .skillCard {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skillsGrid.visible .skillCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delay for each card */
+.skillsGrid.visible .skillCard:nth-child(1) { transition-delay: 0.1s; }
+.skillsGrid.visible .skillCard:nth-child(2) { transition-delay: 0.2s; }
+.skillsGrid.visible .skillCard:nth-child(3) { transition-delay: 0.3s; }
+.skillsGrid.visible .skillCard:nth-child(4) { transition-delay: 0.4s; }
+.skillsGrid.visible .skillCard:nth-child(5) { transition-delay: 0.5s; }
+.skillsGrid.visible .skillCard:nth-child(6) { transition-delay: 0.6s; }
+.skillsGrid.visible .skillCard:nth-child(7) { transition-delay: 0.7s; }
+.skillsGrid.visible .skillCard:nth-child(8) { transition-delay: 0.8s; }
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .skillsGrid .skillCard {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 .skillCard {
   display: flex;
   flex-direction: column;

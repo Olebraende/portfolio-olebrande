@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import Container from '../layout/Container';
 import ProjectCard from '../ui/ProjectCard';
 import { projectsData } from '../../data/projects';
@@ -8,6 +9,7 @@ import styles from '../../styles/modules/FeaturedProjects.module.css';
 const FeaturedProjects = () => {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState('all');
+  const [ref, isVisible] = useScrollAnimation();
 
   const filters = [
     { id: 'all', label: t.projects.filterAll },
@@ -44,7 +46,10 @@ const FeaturedProjects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className={styles.projectsGrid}>
+        <div 
+          ref={ref}
+          className={`${styles.projectsGrid} ${isVisible ? styles.visible : ''}`}
+        >
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

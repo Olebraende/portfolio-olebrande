@@ -20,6 +20,7 @@ const Hero = () => {
             src="/pics/pic-ole-1.jpg" 
             alt="Ole Mathias Brænde" 
             className={styles.profileImage}
+            loading="eager"
           />
           
           <div className={styles.infoBox}>

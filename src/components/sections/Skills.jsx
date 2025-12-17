@@ -1,9 +1,11 @@
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import Container from '../layout/Container';
 import styles from '../../styles/modules/Skills.module.css';
 
 const Skills = () => {
   const { t } = useLanguage();
+  const [ref, isVisible] = useScrollAnimation();
 
   const skills = [
     { name: 'HTML', icon: 'bxl-html5' },
@@ -26,7 +28,10 @@ const Skills = () => {
           <p className={styles.subtitle}>{t.skills.subtitle}</p>
         </div>
 
-        <div className={styles.skillsGrid}>
+        <div 
+          ref={ref}
+          className={`${styles.skillsGrid} ${isVisible ? styles.visible : ''}`}
+        >
           {skills.map((skill) => (
             <div key={skill.name} className={styles.skillCard}>
               <i className={`bx ${skill.icon}`}></i>

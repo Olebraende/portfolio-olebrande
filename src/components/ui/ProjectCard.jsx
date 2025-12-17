@@ -11,6 +11,7 @@ const ProjectCard = ({ project }) => {
           src={project.image} 
           alt={project.title[language]} 
           className={styles.image}
+          loading="lazy"
         />
       </div>
       
