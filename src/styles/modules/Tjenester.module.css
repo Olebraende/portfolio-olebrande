@@ -1,0 +1,135 @@
+.tjenester {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-4xl);
+  font-weight: 900;
+  margin-bottom: var(--space-md);
+}
+
+.subtitle {
+  font-size: var(--font-xl);
+  color: var(--color-text-muted);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.servicesSection {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background-secondary);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* CTA Section */
+.cta {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-background);
+}
+
+.ctaContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-2xl);
+  background-color: var(--color-background-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.ctaTitle {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--font-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(228, 97, 71, 0.4);
+}
+
+.ctaButton i {
+  font-size: var(--font-xl);
+  transition: transform var(--transition-fast);
+}
+
+.ctaButton:hover i {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  .title {
+    font-size: var(--font-3xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-lg);
+  }
+
+  .servicesSection {
+    padding: var(--space-2xl) 0;
+  }
+
+  .cta {
+    padding: var(--space-2xl) 0;
+  }
+
+  .ctaContent {
+    padding: var(--space-xl);
+  }
+
+  .ctaTitle {
+    font-size: var(--font-xl);
+  }
+
+  .ctaButton {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-base);
+  }
+}

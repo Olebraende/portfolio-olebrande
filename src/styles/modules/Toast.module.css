@@ -1,0 +1,54 @@
+.toast {
+  position: fixed;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-background-secondary);
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  z-index: var(--z-toast);
+  animation: slideInUp 0.3s ease-out;
+}
+
+.toast i {
+  font-size: var(--font-xl);
+  color: var(--color-accent);
+}
+
+.toast span {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+  .toast {
+    bottom: var(--space-lg);
+    right: var(--space-md);
+    left: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .toast span {
+    font-size: var(--font-sm);
+  }
+}
