@@ -33,7 +33,7 @@ const Navigation = () => {
   return (
     <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <Link to="/" className={styles.logo} aria-label={t.nav.home}>
-        <span className="gradient-text">Portfolio</span>
+        <span className="gradient-text">Ole Brænde</span>
       </Link>
 
       <ul className={`${styles.links} ${isMobileMenuOpen ? styles.active : ''}`}>

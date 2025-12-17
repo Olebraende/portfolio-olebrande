@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
+import ScrollToTopOnMount from './components/layout/ScrollToTopOnMount';
 import Home from './pages/Home';
 import Tjenester from './pages/Tjenester';
 import Kontakt from './pages/Kontakt';
@@ -9,6 +10,7 @@ import Kontakt from './pages/Kontakt';
 function App() {
   return (
     <>
+    <ScrollToTopOnMount />
       <Navigation />
       <main>
         <Routes>
