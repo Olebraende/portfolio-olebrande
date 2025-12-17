@@ -1,8 +1,8 @@
 .footer {
-  background-color: var(--color-background);
-  border-top: 1px solid var(--color-border);
+  background-color: var(--color-background-secondary);
+  /* border-top: 1px solid var(--color-border); */
   padding: var(--space-2xl) 0;
-  margin-top: var(--space-3xl);
+  margin-top: var(--space-1xl);
 }
 
 .container {
