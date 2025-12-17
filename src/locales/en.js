@@ -129,4 +129,16 @@ export const en = {
     error: 'An error occurred',
     backToTop: 'Back to top',
   },
+
+  // Cookie Consent
+  cookies: {
+    message: 'We use cookies to improve user experience and analyze traffic. You can choose to accept all or only necessary cookies.',
+    accept: 'Accept all',
+    acceptNecessary: 'Only necessary',
+    learnMore: 'Learn more',
+    necessary: 'Necessary',
+    analytics: 'Analytics',
+    necessaryDesc: 'Required for the website to function (language preferences)',
+    analyticsDesc: 'Helps us understand how visitors use the website (Google Analytics)',
+  },
 };

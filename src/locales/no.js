@@ -129,4 +129,16 @@ export const no = {
     error: 'En feil oppstod',
     backToTop: 'Tilbake til toppen',
   },
+
+  // Cookie Consent
+  cookies: {
+    message: 'Vi bruker informasjonskapsler for å forbedre brukeropplevelsen og analysere trafikk. Du kan velge å godta alle eller kun nødvendige informasjonskapsler.',
+    accept: 'Godta alle',
+    acceptNecessary: 'Kun nødvendige',
+    learnMore: 'Les mer',
+    necessary: 'Nødvendige',
+    analytics: 'Analyse',
+    necessaryDesc: 'Nødvendig for at nettstedet skal fungere (språkvalg)',
+    analyticsDesc: 'Hjelper oss å forstå hvordan besøkende bruker nettstedet (Google Analytics)',
+  },
 };
