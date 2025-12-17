@@ -44,7 +44,10 @@ const Kontakt = () => {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'contact',
-          ...formData,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
         }).toString(),
       });
 
@@ -91,6 +94,7 @@ const Kontakt = () => {
               <form
                 name="contact"
                 method="POST"
+                action="/kontakt"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
