@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
 import { setAnalyticsConsent, hasAnalyticsConsent } from '../../utils/analytics';
-import styles from '../../styles/modules/CookieConsent.module.css';
+import styles from '../../styles/modules/ConsentBanner.module.css';
 
 const CookieConsent = () => {
   const { t } = useLanguage();

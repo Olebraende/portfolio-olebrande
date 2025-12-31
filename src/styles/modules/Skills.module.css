@@ -48,6 +48,7 @@
 .skillsGrid.visible .skillCard:nth-child(6) { transition-delay: 0.6s; }
 .skillsGrid.visible .skillCard:nth-child(7) { transition-delay: 0.7s; }
 .skillsGrid.visible .skillCard:nth-child(8) { transition-delay: 0.8s; }
+.skillsGrid.visible .skillCard:nth-child(9) { transition-delay: 0.9s; }
 
 /* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {

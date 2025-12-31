@@ -4,7 +4,7 @@ import Navigation from './components/layout/Navigation';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/layout/ScrollToTop';
 import ScrollToTopOnMount from './components/layout/ScrollToTopOnMount';
-import CookieConsent from './components/ui/CookieConsent';
+import CookieConsent from './components/ui/ConsentBanner';
 import { hasAnalyticsConsent, initGA, trackPageView } from './utils/analytics';
 import Home from './pages/Home';
 import Tjenester from './pages/Tjenester';

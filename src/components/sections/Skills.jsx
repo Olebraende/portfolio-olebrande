@@ -16,6 +16,7 @@ const Skills = () => {
     { name: 'Figma', icon: 'bxl-figma' },
     { name: 'Node.js', icon: 'bxl-nodejs' },
     { name: 'GitHub', icon: 'bxl-github' },
+    { name: 'SQL', icon: 'bx-data' },
   ];
 
   return (
