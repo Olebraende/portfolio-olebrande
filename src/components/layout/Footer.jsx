@@ -3,20 +3,21 @@ import styles from '../../styles/modules/Footer.module.css';
 
 const Footer = () => {
   const { t } = useLanguage();
+  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { 
-      icon: 'bxl-github', 
+    {
+      icon: 'bxl-github',
       url: 'https://github.com/Olebraende',
       label: 'GitHub'
     },
-    { 
-      icon: 'bxl-linkedin', 
+    {
+      icon: 'bxl-linkedin',
       url: 'https://www.linkedin.com/in/olebrande/',
       label: 'LinkedIn'
     },
-    { 
-      icon: 'bx-envelope', 
+    {
+      icon: 'bx-envelope',
       url: 'mailto:olembrande.work@gmail.com',
       label: 'Email'
     },
@@ -29,7 +30,7 @@ const Footer = () => {
         <div className={styles.colLeft}>
           <div className={styles.colBox}>
             <i className="bx bx-copyright"></i>
-            <span>{t.footer.copyright}</span>
+            <span>{currentYear} Ole Mathias Brænde</span>
           </div>
         </div>
 
