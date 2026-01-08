@@ -121,3 +121,4 @@ Forms will automatically be detected and enabled.
 - GitHub: [@Olebraende](https://github.com/Olebraende)
 - LinkedIn: [Ole Brænde](https://www.linkedin.com/in/olebrande/)
 - Email: olembrande.work@gmail.com
+- Website: www.olebrande.no
