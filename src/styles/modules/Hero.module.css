@@ -133,11 +133,11 @@
   }
 
   .title {
-    font-size: var(--font-3xl);
+    font-size: var(--font-2xl);
   }
 
   .subtitle {
-    font-size: var(--font-xl);
+    font-size: var(--font-lg);
   }
 
   .description {
@@ -163,7 +163,7 @@
   }
 
   .title {
-    font-size: var(--font-2xl);
+    font-size: var(--font-xl);
   }
 
   .subtitle {
