@@ -12,8 +12,8 @@ const Home = () => {
   // Set page meta tags
   usePageMeta(
     language === 'no' 
-      ? 'Ole Brænde | Frontend Developer & IT-Konsulent'
-      : 'Ole Brænde | Frontend Developer & IT Consultant',
+      ? 'Ole Mathias Brænde | Frontend Developer & IT-Konsulent'
+      : 'Ole Mathias Brænde | Frontend Developer & IT Consultant',
     language === 'no'
       ? 'Ole Mathias Brænde - Frontend utvikler og IT-konsulent. Spesialisert i webutvikling, hosting og vedlikehold av moderne webløsninger.'
       : 'Ole Mathias Brænde - Frontend developer and IT consultant. Specialized in web development, hosting, and maintenance of modern web solutions.'

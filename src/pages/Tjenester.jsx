@@ -10,7 +10,7 @@ const Tjenester = () => {
   
   // Set page meta tags
   usePageMeta(
-    `${t.services.title} | Ole Brænde`,
+    `${t.services.title} | Ole Mathias Brænde`,
     language === 'no'
       ? 'Webutvikling, hosting og vedlikehold av moderne webløsninger. Profesjonelle tjenester for ditt digitale prosjekt.'
       : 'Web development, hosting and maintenance of modern web solutions. Professional services for your digital project.'

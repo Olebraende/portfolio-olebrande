@@ -9,7 +9,7 @@ export const no = {
 
   // Hero Section
   hero: {
-    title: 'Ole Brænde',
+    title: 'Ole Mathias Brænde',
     subtitle: 'Jr. Frontend | IT-Utvikler',
     description: 'Moderne webløsninger med fokus på kvalitet, ytelse og brukervennlighet.',
     cta1: 'Se Prosjekter',
@@ -20,7 +20,7 @@ export const no = {
   // About Section
   about: {
     title: 'Om meg',
-    text1: 'Hei, jeg heter Ole Brænde, en engasjert og nysgjerrig utvikler som brenner for å skape løsninger som gir verdi. Med interesse for hele spekteret av utvikling er jeg alltid motivert til å lære mer og ta i bruk nye verktøy og teknologier.',
+    text1: 'Hei, jeg heter Ole Mathias Brænde, en engasjert og nysgjerrig utvikler som brenner for å skape løsninger som gir verdi. Med interesse for hele spekteret av utvikling er jeg alltid motivert til å lære mer og ta i bruk nye verktøy og teknologier.',
     text2: 'Det som driver meg, er muligheten til å løse problemer gjennom effektiv kode og innovative løsninger. Jeg er detaljorientert, samtidig som jeg har et sterkt fokus på brukervennlighet og ytelse.',
     text3: 'Jeg trives i team der jeg kan samarbeide tett med andre utviklere, dele kunnskap og kontinuerlig forbedre både meg selv og prosjektene jeg jobber med. Enten det handler om frontend, backend eller noe midt imellom, er jeg klar til å ta utfordringen og bidra.',
   },

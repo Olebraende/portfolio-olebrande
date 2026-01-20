@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const h1 = document.createElement("h1");
     h1.id = "home-header";
     const h1Span = document.createElement("span");
-    h1Span.textContent = "Ole Brænde";
+    h1Span.textContent = "Ole Mathias Brænde";
     h1.appendChild(h1Span);
 
     const h3 = document.createElement("h3");
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         title: "",
         desc: [
-            "Hei, jeg heter Ole Brænde, en engasjert og nysgjerrig utvikler som brenner for å skape løsninger som gir verdi. " +
+            "Hei, jeg heter Ole Mathias Brænde, en engasjert og nysgjerrig utvikler som brenner for å skape løsninger som gir verdi. " +
             "Med interesse for hele spekteret av utvikling er jeg alltid motivert til å lære mer og ta i bruk nye verktøy og teknologier." +
             "Det som driver meg, er muligheten til å løse problemer gjennom effektiv kode og innovative løsninger. " +
             "Jeg er detaljorientert, samtidig som jeg har et sterkt fokus på brukervennlighet og ytelse. " +

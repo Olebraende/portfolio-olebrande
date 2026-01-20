@@ -21,7 +21,7 @@ const Kontakt = () => {
 
   // Set page meta tags
   usePageMeta(
-    `${t.contact.title} | Ole Brænde`,
+    `${t.contact.title} | Ole Mathias Brænde`,
     language === "no"
       ? "Ta kontakt for et uforpliktende tilbud. Jeg hjelper deg med webutvikling, hosting og vedlikehold."
       : "Get in touch for a no-obligation quote. I help you with web development, hosting and maintenance."

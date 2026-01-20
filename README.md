@@ -119,6 +119,6 @@ Forms will automatically be detected and enabled.
 
 **Ole Mathias Brænde**
 - GitHub: [@Olebraende](https://github.com/Olebraende)
-- LinkedIn: [Ole Brænde](https://www.linkedin.com/in/olebrande/)
+- LinkedIn: [Ole Mathias Brænde](https://www.linkedin.com/in/olebrande/)
 - Email: olembrande.work@gmail.com
 - Website: www.olebrande.no
