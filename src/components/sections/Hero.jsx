@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
 import Container from '../layout/Container';
+import Typewriter from '../ui/Typewriter';
 import styles from '../../styles/modules/Hero.module.css';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [titleComplete, setTitleComplete] = useState(false);
 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');
@@ -25,10 +28,20 @@ const Hero = () => {
           
           <div className={styles.infoBox}>
             <h1 className={styles.title}>
-              <span className="gradient-text">{t.hero.title}</span>
+              <span className="gradient-text">
+                <Typewriter
+                  text={t.hero.title}
+                  speed={80}
+                  onComplete={() => setTitleComplete(true)}
+                />
+              </span>
             </h1>
-            
-            <h2 className={styles.subtitle}>{t.hero.subtitle}</h2>
+
+            <h2 className={styles.subtitle}>
+              {titleComplete && (
+                <Typewriter text={t.hero.subtitle} speed={60} />
+              )}
+            </h2>
             
             <p className={styles.description}>{t.hero.description}</p>
             
