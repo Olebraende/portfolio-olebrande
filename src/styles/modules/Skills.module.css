@@ -65,18 +65,20 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  padding: var(--space-lg);
+  padding: var(--space-xl);
   background-color: var(--color-background-secondary);
-  border: 2px solid var(--color-border);
+  border: 3px solid var(--color-border);
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
   cursor: default;
+  min-height: 140px;
 }
 
 .skillCard:hover {
   transform: translateY(-8px);
   border-color: var(--color-accent);
-  box-shadow: 0 10px 30px rgba(228, 97, 71, 0.2);
+  border-width: 3px;
+  box-shadow: 0 10px 30px rgba(228, 97, 71, 0.25);
 }
 
 .skillCard i {

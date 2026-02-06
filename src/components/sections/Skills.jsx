@@ -12,11 +12,11 @@ const Skills = () => {
     { name: 'CSS', icon: 'bxl-css3' },
     { name: 'JavaScript', icon: 'bxl-javascript' },
     { name: 'React', icon: 'bxl-react' },
-    { name: 'Git', icon: 'bxl-git' },
-    { name: 'Figma', icon: 'bxl-figma' },
-    { name: 'Node.js', icon: 'bxl-nodejs' },
-    { name: 'GitHub', icon: 'bxl-github' },
     { name: 'SQL', icon: 'bx-data' },
+    { name: 'Node.js', icon: 'bxl-nodejs' },
+    { name: 'Git', icon: 'bxl-git' },
+    { name: 'GitHub', icon: 'bxl-github' },
+    { name: 'Figma', icon: 'bxl-figma' },
   ];
 
   return (

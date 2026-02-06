@@ -27,15 +27,29 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
         
-        <a 
-          href={project.liveUrl} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className={styles.btn}
-        >
-          {t.projects.viewLive}
-          <i className="bx bx-link-external"></i>
-        </a>
+        <div className={styles.buttons}>
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.btn}
+          >
+            {t.projects.viewLive}
+            <i className="bx bx-link-external"></i>
+          </a>
+
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.btn} ${styles.btnSecondary}`}
+            >
+              {t.projects.viewCode}
+              <i className="bx bxl-github"></i>
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

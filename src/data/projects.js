@@ -16,6 +16,21 @@ export const projectsData = [
   {
     id: 2,
     title: {
+      no: 'Flyt – Moderne Oppgavebehandling',
+      en: 'Flyt – Modern Task Management',
+    },
+    description: {
+      no: 'En fullverdig oppgavebehandlingsløsning med visuell Kanban-tavle. Dra-og-slipp funksjonalitet, tidsregistrering, prioriteringer og søkefunksjoner. Støtter flerspråklighet og lagrer data lokalt for komplett brukerkontroll.',
+      en: 'A full-featured task management solution with a visual Kanban board. Drag-and-drop functionality, time tracking, priorities, and search features. Supports multiple languages and stores data locally for complete user control.',
+    },
+    image: '/pics/flyt-todo.png',
+    liveUrl: 'https://flyt-todo.netlify.app/',
+    githubUrl: 'https://github.com/Olebraende/todo',
+    tags: ['react', 'responsive', 'design'],
+  },
+  {
+    id: 3,
+    title: {
       no: 'Fjell Kino – Filmoversikt og Tilgjengelighetsfokusert Nettside',
       en: 'Fjell Kino – Movie Overview and Accessibility-Focused Website',
     },
@@ -28,7 +43,7 @@ export const projectsData = [
     tags: ['react', 'responsive', 'accessibility'],
   },
   {
-    id: 3,
+    id: 4,
     title: {
       no: 'Juleoppgave – Interaktiv Adventskalender',
       en: 'Christmas Task – Interactive Advent Calendar',
@@ -42,7 +57,7 @@ export const projectsData = [
     tags: ['vanilla', 'design'],
   },
   {
-    id: 4,
+    id: 5,
     title: {
       no: 'Pong-spill – Klassisk Arkadespill',
       en: 'Pong Game – Classic Arcade Game',

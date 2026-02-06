@@ -4,7 +4,6 @@ import Hero from '../components/sections/Hero';
 import About from '../components/sections/About';
 import Skills from '../components/sections/Skills';
 import FeaturedProjects from '../components/sections/FeaturedProjects';
-import NowBuilding from '../components/sections/NowBuilding';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -25,7 +24,6 @@ const Home = () => {
       <About />
       <Skills />
       <FeaturedProjects />
-      <NowBuilding />
     </>
   );
 };
