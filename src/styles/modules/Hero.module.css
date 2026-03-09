@@ -5,6 +5,67 @@
   justify-content: center;
   padding: var(--space-3xl) 0;
   background-color: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background orbs – CSS only, GPU-accelerated */
+.orb1,
+.orb2,
+.orb3 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform;
+  filter: blur(90px);
+}
+
+.orb1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(228, 97, 71, 0.18) 0%, transparent 70%);
+  top: -120px;
+  right: -100px;
+  animation: orbDrift1 14s ease-in-out infinite alternate;
+}
+
+.orb2 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(128, 0, 0, 0.15) 0%, transparent 70%);
+  bottom: -80px;
+  left: -60px;
+  animation: orbDrift2 11s ease-in-out infinite alternate;
+}
+
+.orb3 {
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(228, 97, 71, 0.1) 0%, transparent 70%);
+  top: 40%;
+  left: 30%;
+  animation: orbDrift3 16s ease-in-out infinite alternate;
+}
+
+@keyframes orbDrift1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-40px, 30px) scale(1.1); }
+}
+
+@keyframes orbDrift2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, -25px) scale(1.08); }
+}
+
+@keyframes orbDrift3 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(20px, 35px) scale(0.92); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb1, .orb2, .orb3 {
+    animation: none;
+  }
 }
 
 .heroContent {
@@ -14,6 +75,8 @@
   text-align: center;
   gap: var(--space-xl);
   animation: fadeIn 0.8s ease-out;
+  position: relative;
+  z-index: 1;
 }
 
 .profileImage {
