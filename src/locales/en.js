@@ -36,9 +36,8 @@ export const en = {
     title: 'Featured Projects',
     subtitle: 'Some of my recent work',
     filterAll: 'All',
-    filterReact: 'React',
-    filterVanilla: 'Vanilla JS',
-    filterDesign: 'Design',
+    showAll: 'Show all ({count})',
+    showLess: 'Show less',
     viewLive: 'View Live Demo',
     viewCode: 'View Code',
     tags: {
@@ -47,6 +46,11 @@ export const en = {
       design: 'Design',
       responsive: 'Responsive',
       accessibility: 'Accessibility',
+      css: 'CSS',
+      html: 'HTML',
+      'ui-ux': 'UI/UX',
+      api: 'API',
+      typescript: 'TypeScript',
     },
   },
 

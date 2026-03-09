@@ -36,9 +36,8 @@ export const no = {
     title: 'Utvalgte Prosjekter',
     subtitle: 'Noen av mine siste arbeider',
     filterAll: 'Alle',
-    filterReact: 'React',
-    filterVanilla: 'Vanilla JS',
-    filterDesign: 'Design',
+    showAll: 'Vis alle ({count})',
+    showLess: 'Vis færre',
     viewLive: 'Se Live Demo',
     viewCode: 'Se Kode',
     tags: {
@@ -47,6 +46,11 @@ export const no = {
       design: 'Design',
       responsive: 'Responsiv',
       accessibility: 'Tilgjengelighet',
+      css: 'CSS',
+      html: 'HTML',
+      'ui-ux': 'UI/UX',
+      api: 'API',
+      typescript: 'TypeScript',
     },
   },
 

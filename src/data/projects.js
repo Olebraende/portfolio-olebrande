@@ -11,7 +11,7 @@ export const projectsData = [
     },
     image: '/pics/kroensji.png',
     liveUrl: 'https://krønsji.no',
-    tags: ['vanilla', 'design', 'responsive'],
+    tags: ['vanilla', 'design', 'responsive', 'css', 'html', 'ui-ux'],
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const projectsData = [
     image: '/pics/flyt-todo.png',
     liveUrl: 'https://flyt-todo.netlify.app/',
     githubUrl: 'https://github.com/Olebraende/todo',
-    tags: ['react', 'responsive', 'design'],
+    tags: ['react', 'responsive', 'design', 'css', 'ui-ux'],
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ export const projectsData = [
     },
     image: '/pics/fjell-kino.png',
     liveUrl: 'https://olem-kodehode4.github.io/Fjell-Kino/',
-    tags: ['react', 'responsive', 'accessibility'],
+    tags: ['react', 'responsive', 'accessibility', 'css', 'api'],
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const projectsData = [
     },
     image: '/pics/calendar.png',
     liveUrl: 'https://olem-kodehode4.github.io/juleoppgave/',
-    tags: ['vanilla', 'design'],
+    tags: ['vanilla', 'design', 'css', 'html'],
   },
   {
     id: 5,
@@ -68,6 +68,6 @@ export const projectsData = [
     },
     image: '/pics/pong-game.png',
     liveUrl: 'https://olebraende.github.io/Pong-Game/',
-    tags: ['vanilla'],
+    tags: ['vanilla', 'css', 'html'],
   },
 ];

@@ -6,21 +6,56 @@ import ProjectCard from '../ui/ProjectCard';
 import { projectsData } from '../../data/projects';
 import styles from '../../styles/modules/FeaturedProjects.module.css';
 
+const INITIAL_COUNT = 4;
+
+const FILTERS = [
+  { id: 'react', icon: 'bxl-react' },
+  { id: 'vanilla', icon: 'bxl-javascript' },
+  { id: 'css', icon: 'bxl-css3' },
+  { id: 'html', icon: 'bxl-html5' },
+  { id: 'design', icon: 'bx-palette' },
+  { id: 'ui-ux', icon: 'bx-layer' },
+  { id: 'responsive', icon: 'bx-devices' },
+  { id: 'accessibility', icon: 'bx-accessibility' },
+  { id: 'api', icon: 'bx-code-curly' },
+  { id: 'typescript', icon: 'bxl-typescript' },
+];
+
 const FeaturedProjects = () => {
   const { t } = useLanguage();
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilters, setActiveFilters] = useState(new Set());
+  const [showAll, setShowAll] = useState(false);
   const [ref, isVisible] = useScrollAnimation();
 
-  const filters = [
-    { id: 'all', label: t.projects.filterAll },
-    { id: 'react', label: t.projects.filterReact },
-    { id: 'vanilla', label: t.projects.filterVanilla },
-    { id: 'design', label: t.projects.filterDesign },
-  ];
+  const toggleFilter = (filterId) => {
+    setActiveFilters(prev => {
+      const next = new Set(prev);
+      if (next.has(filterId)) {
+        next.delete(filterId);
+      } else {
+        next.add(filterId);
+      }
+      return next;
+    });
+    setShowAll(false);
+  };
 
-  const filteredProjects = activeFilter === 'all'
+  const clearFilters = () => {
+    setActiveFilters(new Set());
+    setShowAll(false);
+  };
+
+  const filteredProjects = activeFilters.size === 0
     ? projectsData
-    : projectsData.filter(project => project.tags.includes(activeFilter));
+    : projectsData.filter(project =>
+        project.tags.some(tag => activeFilters.has(tag))
+      );
+
+  const displayedProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, INITIAL_COUNT);
+
+  const hasMore = filteredProjects.length > INITIAL_COUNT;
 
   return (
     <section className={styles.projects} id="projects">
@@ -32,34 +67,68 @@ const FeaturedProjects = () => {
           <p className={styles.subtitle}>{t.projects.subtitle}</p>
         </div>
 
-        {/* Filter Buttons */}
-        <div className={styles.filters}>
-          {filters.map((filter) => (
+        {/* Filter Chips */}
+        <div className={styles.filtersWrapper}>
+          <div className={styles.filters}>
             <button
-              key={filter.id}
-              className={`${styles.filterBtn} ${activeFilter === filter.id ? styles.active : ''}`}
-              onClick={() => setActiveFilter(filter.id)}
+              className={`${styles.filterChip} ${activeFilters.size === 0 ? styles.active : ''}`}
+              onClick={clearFilters}
             >
-              {filter.label}
+              <i className="bx bx-grid-alt"></i>
+              <span>{t.projects.filterAll}</span>
             </button>
-          ))}
+            {FILTERS.map((filter) => (
+              t.projects.tags[filter.id] && (
+                <button
+                  key={filter.id}
+                  className={`${styles.filterChip} ${activeFilters.has(filter.id) ? styles.active : ''}`}
+                  onClick={() => toggleFilter(filter.id)}
+                >
+                  <i className={`bx ${filter.icon}`}></i>
+                  <span>{t.projects.tags[filter.id]}</span>
+                </button>
+              )
+            ))}
+          </div>
         </div>
 
         {/* Projects Grid */}
-        <div 
+        <div
           ref={ref}
           className={`${styles.projectsGrid} ${isVisible ? styles.visible : ''}`}
         >
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+          {displayedProjects.map((project, index) => (
+            <div
+              key={project.id}
+              className={styles.cardWrapper}
+              style={{ animationDelay: `${index * 80}ms` }}
+            >
+              <ProjectCard
+                project={project}
+                onTagClick={toggleFilter}
+              />
+            </div>
           ))}
         </div>
 
-        {/* Show message if no projects match filter */}
+        {/* No Results */}
         {filteredProjects.length === 0 && (
-          <p className={styles.noResults}>
-            {t.common.error}
-          </p>
+          <p className={styles.noResults}>{t.common.error}</p>
+        )}
+
+        {/* Show All / Show Less */}
+        {hasMore && (
+          <div className={styles.showAllWrapper}>
+            <button
+              className={styles.showAllBtn}
+              onClick={() => setShowAll(prev => !prev)}
+            >
+              {showAll
+                ? t.projects.showLess
+                : t.projects.showAll.replace('{count}', filteredProjects.length)}
+              <i className={`bx ${showAll ? 'bx-chevron-up' : 'bx-chevron-down'}`}></i>
+            </button>
+          </div>
         )}
       </Container>
     </section>

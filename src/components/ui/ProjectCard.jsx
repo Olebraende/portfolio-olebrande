@@ -1,7 +1,7 @@
 import { useLanguage } from '../../hooks/useLanguage';
 import styles from '../../styles/modules/ProjectCard.module.css';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onTagClick }) => {
   const { language, t } = useLanguage();
 
   return (
@@ -21,9 +21,14 @@ const ProjectCard = ({ project }) => {
         
         <div className={styles.tags}>
           {project.tags.map((tag) => (
-            <span key={tag} className={styles.tag}>
-              {t.projects.tags[tag]}
-            </span>
+            <button
+              key={tag}
+              type="button"
+              className={styles.tag}
+              onClick={() => onTagClick?.(tag)}
+            >
+              {t.projects.tags[tag] || tag}
+            </button>
           ))}
         </div>
         
