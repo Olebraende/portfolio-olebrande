@@ -7,18 +7,25 @@ import ProjectCard from '../components/ui/ProjectCard';
 import { projectsData } from '../data/projects';
 import styles from '../styles/modules/Prosjekter.module.css';
 
-const FILTERS = [
-  { id: 'react', icon: 'bxl-react' },
-  { id: 'vanilla', icon: 'bxl-javascript' },
-  { id: 'css', icon: 'bxl-css3' },
-  { id: 'html', icon: 'bxl-html5' },
-  { id: 'design', icon: 'bx-palette' },
-  { id: 'ui-ux', icon: 'bx-layer' },
-  { id: 'responsive', icon: 'bx-devices' },
-  { id: 'accessibility', icon: 'bx-accessibility' },
-  { id: 'api', icon: 'bx-code-curly' },
-  { id: 'typescript', icon: 'bxl-typescript' },
-];
+// Icon mapping – add new tags here when needed
+const TAG_ICONS = {
+  react: 'bxl-react',
+  vanilla: 'bxl-javascript',
+  css: 'bxl-css3',
+  html: 'bxl-html5',
+  design: 'bx-palette',
+  'ui-ux': 'bx-layer',
+  responsive: 'bx-devices',
+  accessibility: 'bx-accessibility',
+  api: 'bx-code-curly',
+  typescript: 'bxl-typescript',
+};
+
+// Derive available filters from actual project data (only tags in use appear)
+const usedTags = [...new Set(projectsData.flatMap(p => p.tags))];
+const FILTERS = Object.keys(TAG_ICONS)
+  .filter(id => usedTags.includes(id))
+  .map(id => ({ id, icon: TAG_ICONS[id] }));
 
 const Prosjekter = () => {
   const { language, t } = useLanguage();
