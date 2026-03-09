@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../hooks/useLanguage';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { usePageMeta } from '../utils/usePageMeta';
@@ -64,6 +65,11 @@ const Prosjekter = () => {
   return (
     <section className={styles.page}>
       <Container>
+        <Link to="/" className={styles.backBtn}>
+          <i className="bx bx-arrow-back"></i>
+          {language === 'no' ? 'Tilbake' : 'Back'}
+        </Link>
+
         <div className={styles.header}>
           <h1 className={styles.title}>
             <span className="gradient-text">{t.projects.pageTitle}</span>

@@ -3,6 +3,26 @@
   min-height: 80vh;
 }
 
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+  transition: all var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: var(--color-text);
+  gap: 10px;
+}
+
+.backBtn i {
+  font-size: var(--font-base);
+}
+
 .header {
   text-align: center;
   margin-bottom: var(--space-xl);
