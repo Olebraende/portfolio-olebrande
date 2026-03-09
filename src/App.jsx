@@ -1,3 +1,4 @@
+import { Suspense, lazy } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Navigation from './components/layout/Navigation';
@@ -7,9 +8,11 @@ import ScrollToTopOnMount from './components/layout/ScrollToTopOnMount';
 import CookieConsent from './components/ui/ConsentBanner';
 import { hasAnalyticsConsent, initGA, trackPageView } from './utils/analytics';
 import Home from './pages/Home';
-import Tjenester from './pages/Tjenester';
-import Kontakt from './pages/Kontakt';
-import Prosjekter from './pages/Prosjekter';
+
+const Tjenester = lazy(() => import('./pages/Tjenester'));
+const Kontakt = lazy(() => import('./pages/Kontakt'));
+const Prosjekter = lazy(() => import('./pages/Prosjekter'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   const location = useLocation();
@@ -33,12 +36,17 @@ function App() {
       <ScrollToTopOnMount />
       <Navigation />
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/prosjekter" element={<Prosjekter />} />
-          <Route path="/tjenester" element={<Tjenester />} />
-          <Route path="/kontakt" element={<Kontakt />} />
-        </Routes>
+        <div key={location.pathname} className="page-transition">
+          <Suspense fallback={null}>
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/prosjekter" element={<Prosjekter />} />
+              <Route path="/tjenester" element={<Tjenester />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </div>
       </main>
       <Footer />
       <ScrollToTop />
