@@ -48,15 +48,6 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink
-            to="/prosjekter"
-            className={({ isActive }) => isActive ? styles.activeLink : ''}
-            onClick={closeMobileMenu}
-          >
-            {t.nav.projects}
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/tjenester"
             className={({ isActive }) => isActive ? styles.activeLink : ''}
             onClick={closeMobileMenu}
