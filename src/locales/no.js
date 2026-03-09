@@ -36,8 +36,9 @@ export const no = {
     title: 'Utvalgte Prosjekter',
     subtitle: 'Noen av mine siste arbeider',
     filterAll: 'Alle',
-    showAll: 'Vis alle ({count})',
-    showLess: 'Vis færre',
+    viewAll: 'Se alle prosjekter',
+    pageTitle: 'Prosjekter',
+    pageSubtitle: 'Alt jeg har bygget',
     viewLive: 'Se Live Demo',
     viewCode: 'Se Kode',
     tags: {

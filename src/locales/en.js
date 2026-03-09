@@ -36,8 +36,9 @@ export const en = {
     title: 'Featured Projects',
     subtitle: 'Some of my recent work',
     filterAll: 'All',
-    showAll: 'Show all ({count})',
-    showLess: 'Show less',
+    viewAll: 'View all projects',
+    pageTitle: 'Projects',
+    pageSubtitle: 'Everything I\'ve built',
     viewLive: 'View Live Demo',
     viewCode: 'View Code',
     tags: {
