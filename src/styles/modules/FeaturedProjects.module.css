@@ -5,7 +5,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
 .title {
@@ -20,11 +20,11 @@
   opacity: 0.8;
 }
 
-/* Projects Grid */
+/* Projects Grid – always 3 columns, shrinks naturally */
 .projectsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-xl);
+  gap: var(--space-md);
 }
 
 /* Card wrapper for staggered animation */
@@ -40,7 +40,7 @@
 @keyframes cardEnter {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -63,7 +63,7 @@
 .cta {
   display: flex;
   justify-content: center;
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-xl);
 }
 
 .ctaBtn {
@@ -98,20 +98,21 @@
    RESPONSIVE DESIGN
 ======================================== */
 
-@media (max-width: 1024px) {
+/* Tablet: 2 columns */
+@media (max-width: 860px) {
   .projectsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-lg);
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile: 1 column */
+@media (max-width: 560px) {
   .projects {
     padding: var(--space-2xl) 0;
   }
 
   .header {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
   }
 
   .title {
@@ -124,6 +125,6 @@
 
   .projectsGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: var(--space-sm);
   }
 }

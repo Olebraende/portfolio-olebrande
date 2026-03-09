@@ -5,7 +5,7 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
 }
 
 .title {
@@ -28,7 +28,7 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
   padding-bottom: 4px;
 }
 
@@ -47,8 +47,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 16px;
-  font-size: var(--font-sm);
+  padding: 6px 14px;
+  font-size: var(--font-xs);
   font-weight: 600;
   font-family: inherit;
   color: var(--color-text-muted);
@@ -61,7 +61,7 @@
 }
 
 .filterChip i {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1;
 }
 
@@ -85,8 +85,8 @@
 
 .projectsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: var(--space-xl);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-md);
 }
 
 .cardWrapper {
@@ -101,7 +101,7 @@
 @keyframes cardEnter {
   from {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -130,20 +130,28 @@
    RESPONSIVE DESIGN
 ======================================== */
 
-@media (max-width: 1024px) {
+/* Tablet: slightly tighter */
+@media (max-width: 860px) {
   .projectsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .filters {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width: 560px) {
   .page {
     padding: var(--space-2xl) 0;
   }
 
   .header {
-    margin-bottom: var(--space-xl);
+    margin-bottom: var(--space-lg);
   }
 
   .title {
@@ -155,22 +163,16 @@
   }
 
   .filtersWrapper {
-    margin-bottom: var(--space-xl);
-  }
-
-  .filters {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
+    margin-bottom: var(--space-lg);
   }
 
   .filterChip {
-    padding: 6px 12px;
-    font-size: var(--font-xs);
+    padding: 5px 10px;
+    font-size: 0.65rem;
   }
 
   .projectsGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-md);
+    gap: var(--space-sm);
   }
 }
