@@ -10,6 +10,7 @@ export const projectsData = [
       en: 'A concept agency website built from scratch to demonstrate advanced frontend techniques including glassmorphism, scroll-driven animations, parallax depth, and interactive micro-interactions. All content is fictional and for demonstration purposes only.',
     },
     image: '/pics/nuvora.png',
+    liveUrl: 'https://nuvora-phi.vercel.app/',
     tags: ['nextjs', 'typescript', 'css', 'animation', 'ui-ux', 'design'],
   },
   {
