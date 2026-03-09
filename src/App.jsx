@@ -9,6 +9,7 @@ import { hasAnalyticsConsent, initGA, trackPageView } from './utils/analytics';
 import Home from './pages/Home';
 import Tjenester from './pages/Tjenester';
 import Kontakt from './pages/Kontakt';
+import Prosjekter from './pages/Prosjekter';
 
 function App() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/prosjekter" element={<Prosjekter />} />
           <Route path="/tjenester" element={<Tjenester />} />
           <Route path="/kontakt" element={<Kontakt />} />
         </Routes>
