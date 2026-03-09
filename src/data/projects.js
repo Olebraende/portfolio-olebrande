@@ -1,5 +1,18 @@
 export const projectsData = [
   {
+    id: 6,
+    title: {
+      no: 'Nuvora – Digital Agency Konsept',
+      en: 'Nuvora – Digital Agency Concept',
+    },
+    description: {
+      no: 'Et konsept-nettsted for et digitalt byrå, bygget fra bunnen for å demonstrere avanserte frontend-teknikker som glassmorphism, scroll-drevne animasjoner, parallax-dybde og interaktive micro-interactions. Alt innhold er fiktivt og kun for demonstrasjon.',
+      en: 'A concept agency website built from scratch to demonstrate advanced frontend techniques including glassmorphism, scroll-driven animations, parallax depth, and interactive micro-interactions. All content is fictional and for demonstration purposes only.',
+    },
+    image: '/pics/nuvora.png',
+    tags: ['nextjs', 'typescript', 'css', 'animation', 'ui-ux', 'design'],
+  },
+  {
     id: 1,
     title: {
       no: 'Krønsji – Moderne Nettside for Lokal Restaurant',

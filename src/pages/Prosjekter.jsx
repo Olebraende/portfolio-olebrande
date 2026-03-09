@@ -11,15 +11,17 @@ import styles from '../styles/modules/Prosjekter.module.css';
 // Icon mapping – add new tags here when needed
 const TAG_ICONS = {
   react: 'bxl-react',
+  nextjs: 'bx-server',
   vanilla: 'bxl-javascript',
+  typescript: 'bxl-typescript',
   css: 'bxl-css3',
   html: 'bxl-html5',
   design: 'bx-palette',
   'ui-ux': 'bx-layer',
+  animation: 'bx-slideshow',
   responsive: 'bx-devices',
   accessibility: 'bx-accessibility',
   api: 'bx-code-curly',
-  typescript: 'bxl-typescript',
 };
 
 // Derive available filters from actual project data (only tags in use appear)
