@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../../hooks/useLanguage';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import useCountUp from '../../hooks/useCountUp';
 import { projectsData } from '../../data/projects';
 import Container from '../layout/Container';
@@ -15,8 +16,9 @@ const monthsExperience = (now.getFullYear() - startDate.getFullYear()) * 12
 const Hero = () => {
   const { t, language } = useLanguage();
   const [titleComplete, setTitleComplete] = useState(false);
-  const [projectCount, statsRef] = useCountUp(projectsData.length);
-  const [months] = useCountUp(monthsExperience);
+  const [statsRef, statsVisible] = useScrollAnimation();
+  const projectCount = useCountUp(projectsData.length, statsVisible);
+  const months = useCountUp(monthsExperience, statsVisible);
 
   const scrollToProjects = () => {
     const projectsSection = document.getElementById('projects');

@@ -1,24 +1,14 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-const useCountUp = (target, duration = 1200) => {
+const useCountUp = (target, isVisible, duration = 1200) => {
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
-  const ref = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !started) {
-          setStarted(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    const el = ref.current;
-    if (el) observer.observe(el);
-    return () => { if (el) observer.unobserve(el); };
-  }, [started]);
+    if (isVisible && !started) {
+      setStarted(true);
+    }
+  }, [isVisible, started]);
 
   useEffect(() => {
     if (!started) return;
@@ -28,7 +18,6 @@ const useCountUp = (target, duration = 1200) => {
     const tick = (now) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.round(eased * target));
       if (progress < 1) requestAnimationFrame(tick);
@@ -37,7 +26,7 @@ const useCountUp = (target, duration = 1200) => {
     requestAnimationFrame(tick);
   }, [started, target, duration]);
 
-  return [count, ref];
+  return count;
 };
 
 export default useCountUp;
