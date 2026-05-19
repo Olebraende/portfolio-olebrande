@@ -39,7 +39,6 @@ export const projectsData = [
     },
     image: '/pics/voldatunnelen.png',
     liveUrl: 'https://www.voldatunnelen.no/',
-    githubUrl: 'https://github.com/Olebraende/voldatunnelen',
     tags: ['react', 'typescript', 'responsive', 'design', 'css'],
   },
   {
