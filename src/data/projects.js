@@ -28,6 +28,21 @@ export const projectsData = [
     tags: ['vanilla', 'design', 'responsive', 'css', 'html', 'ui-ux'],
   },
   {
+    id: 7,
+    title: {
+      no: 'Voldatunnelen – Informasjonsside for E39',
+      en: 'Voldatunnelen – Information Site for E39',
+    },
+    description: {
+      no: 'Ei informasjonsside for Voldatunnelen på E39 mellom Volda og Furene. Nettsida gjev lokalmiljøet og reisande oppdatert informasjon om tunnelen, vegstrekkninga og prosjektstatus, med eit reint og responsivt design.',
+      en: 'An information website for the Voldatunnelen on E39 between Volda and Furene. The site provides the local community and travelers with updated information about the tunnel, road section, and project status, featuring a clean and responsive design.',
+    },
+    image: '/pics/voldatunnelen.png',
+    liveUrl: 'https://www.voldatunnelen.no/',
+    githubUrl: 'https://github.com/Olebraende/voldatunnelen',
+    tags: ['react', 'typescript', 'responsive', 'design', 'css'],
+  },
+  {
     id: 2,
     title: {
       no: 'Flyt – Moderne Oppgavebehandling',
