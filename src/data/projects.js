@@ -11,6 +11,7 @@ export const projectsData = [
     },
     image: '/pics/nuvora.png',
     liveUrl: 'https://nuvora-phi.vercel.app/',
+    githubUrl: 'https://github.com/Olebraende/nuvora',
     tags: ['nextjs', 'typescript', 'css', 'animation', 'ui-ux', 'design'],
   },
   {

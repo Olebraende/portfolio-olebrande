@@ -11,6 +11,7 @@ const Skills = () => {
     { name: 'HTML', icon: 'bxl-html5' },
     { name: 'CSS', icon: 'bxl-css3' },
     { name: 'JavaScript', icon: 'bxl-javascript' },
+    { name: 'TypeScript', icon: 'bxl-typescript' },
     { name: 'React', icon: 'bxl-react' },
     { name: 'SQL', icon: 'bx-data' },
     { name: 'Node.js', icon: 'bxl-nodejs' },
