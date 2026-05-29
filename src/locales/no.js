@@ -44,11 +44,8 @@ export const no = {
     tags: {
       react: 'React',
       nextjs: 'Next.js',
-      vanilla: 'Vanilla JS',
+      javascript: 'JavaScript',
       typescript: 'TypeScript',
-      css: 'CSS',
-      html: 'HTML',
-      design: 'Design',
       'ui-ux': 'UI/UX',
       animation: 'Animasjon',
       responsive: 'Responsiv',

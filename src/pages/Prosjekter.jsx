@@ -12,7 +12,7 @@ import styles from '../styles/modules/Prosjekter.module.css';
 const TAG_ICONS = {
   react: 'bxl-react',
   nextjs: 'bx-server',
-  vanilla: 'bxl-javascript',
+  javascript: 'bxl-javascript',
   typescript: 'bxl-typescript',
   css: 'bxl-css3',
   html: 'bxl-html5',

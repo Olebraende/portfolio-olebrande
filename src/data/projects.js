@@ -12,7 +12,7 @@ export const projectsData = [
     image: '/pics/nuvora.png',
     liveUrl: 'https://nuvora-phi.vercel.app/',
     githubUrl: 'https://github.com/Olebraende/nuvora',
-    tags: ['nextjs', 'typescript', 'css', 'animation', 'ui-ux', 'design'],
+    tags: ['nextjs', 'typescript', 'animation', 'ui-ux'],
   },
   {
     id: 1,
@@ -26,7 +26,7 @@ export const projectsData = [
     },
     image: '/pics/kroensji.png',
     liveUrl: 'https://krønsji.no',
-    tags: ['vanilla', 'design', 'responsive', 'css', 'html', 'ui-ux'],
+    tags: ['javascript', 'responsive', 'ui-ux'],
   },
   {
     id: 7,
@@ -40,7 +40,7 @@ export const projectsData = [
     },
     image: '/pics/voldatunnelen.png',
     liveUrl: 'https://www.voldatunnelen.no/',
-    tags: ['react', 'typescript', 'responsive', 'design', 'css'],
+    tags: ['react', 'typescript', 'responsive'],
   },
   {
     id: 2,
@@ -55,7 +55,7 @@ export const projectsData = [
     image: '/pics/flyt-todo.png',
     liveUrl: 'https://flyt-todo.netlify.app/',
     githubUrl: 'https://github.com/Olebraende/todo',
-    tags: ['react', 'responsive', 'design', 'css', 'ui-ux'],
+    tags: ['react', 'responsive', 'ui-ux'],
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ export const projectsData = [
     },
     image: '/pics/fjell-kino.png',
     liveUrl: 'https://olem-kodehode4.github.io/Fjell-Kino/',
-    tags: ['react', 'responsive', 'accessibility', 'css', 'api'],
+    tags: ['react', 'responsive', 'accessibility', 'api'],
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ export const projectsData = [
     },
     image: '/pics/calendar.png',
     liveUrl: 'https://olem-kodehode4.github.io/juleoppgave/',
-    tags: ['vanilla', 'design', 'css', 'html'],
+    tags: ['javascript'],
   },
   {
     id: 5,
@@ -97,6 +97,6 @@ export const projectsData = [
     },
     image: '/pics/pong-game.png',
     liveUrl: 'https://olebraende.github.io/Pong-Game/',
-    tags: ['vanilla', 'css', 'html'],
+    tags: ['javascript'],
   },
 ];
