@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import { usePageMeta } from "../utils/usePageMeta";
 import Container from "../components/layout/Container";
@@ -17,7 +17,22 @@ const Kontakt = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
 
-  const email = "olembrande.work@gmail.com";
+  const getEmail = () => ['olembrande', '.work', '@', 'gmail', '.com'].join('');
+  const emailCanvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = emailCanvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const addr = getEmail();
+    ctx.font = '14px Inter, system-ui, sans-serif';
+    const width = ctx.measureText(addr).width;
+    canvas.width = Math.ceil(width) + 2;
+    canvas.height = 20;
+    ctx.font = '14px Inter, system-ui, sans-serif';
+    ctx.fillStyle = '#e0e0e0';
+    ctx.fillText(addr, 0, 15);
+  }, []);
 
   // Set page meta tags
   usePageMeta(
@@ -68,7 +83,7 @@ const Kontakt = () => {
   };
 
   const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText(email);
+    navigator.clipboard.writeText(getEmail());
     setToastMessage(t.contact.emailCopied);
     setShowToast(true);
   };
@@ -175,7 +190,7 @@ const Kontakt = () => {
                 <i className="bx bx-envelope"></i>
                 <div>
                   <strong>{t.contact.emailLabel}</strong>
-                  <p>{email}</p>
+                  <canvas ref={emailCanvasRef} className={styles.emailCanvas} />
                   <button
                     className={styles.copyBtn}
                     onClick={copyEmailToClipboard}

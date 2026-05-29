@@ -165,10 +165,14 @@
   font-size: var(--font-sm);
   color: var(--color-text-muted);
   margin: 0 0 var(--space-sm) 0;
+}
+
+.emailCanvas {
+  display: block;
+  margin: 0 0 var(--space-sm) 0;
   user-select: none;
   -webkit-user-select: none;
   pointer-events: none;
-  cursor: default;
 }
 
 .copyBtn {
