@@ -30,8 +30,8 @@
 
 .skillsGrid .skillCard {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(24px);
+  transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
 }
 
 .skillsGrid.visible .skillCard {
@@ -40,16 +40,16 @@
 }
 
 /* Staggered animation delay for each card */
-.skillsGrid.visible .skillCard:nth-child(1) { transition-delay: 0.1s; }
-.skillsGrid.visible .skillCard:nth-child(2) { transition-delay: 0.2s; }
-.skillsGrid.visible .skillCard:nth-child(3) { transition-delay: 0.3s; }
-.skillsGrid.visible .skillCard:nth-child(4) { transition-delay: 0.4s; }
-.skillsGrid.visible .skillCard:nth-child(5) { transition-delay: 0.5s; }
-.skillsGrid.visible .skillCard:nth-child(6) { transition-delay: 0.6s; }
-.skillsGrid.visible .skillCard:nth-child(7) { transition-delay: 0.7s; }
-.skillsGrid.visible .skillCard:nth-child(8) { transition-delay: 0.8s; }
-.skillsGrid.visible .skillCard:nth-child(9) { transition-delay: 0.9s; }
-.skillsGrid.visible .skillCard:nth-child(10) { transition-delay: 1.0s; }
+.skillsGrid.visible .skillCard:nth-child(1)  { transition-delay: 0.04s; }
+.skillsGrid.visible .skillCard:nth-child(2)  { transition-delay: 0.08s; }
+.skillsGrid.visible .skillCard:nth-child(3)  { transition-delay: 0.12s; }
+.skillsGrid.visible .skillCard:nth-child(4)  { transition-delay: 0.16s; }
+.skillsGrid.visible .skillCard:nth-child(5)  { transition-delay: 0.20s; }
+.skillsGrid.visible .skillCard:nth-child(6)  { transition-delay: 0.24s; }
+.skillsGrid.visible .skillCard:nth-child(7)  { transition-delay: 0.28s; }
+.skillsGrid.visible .skillCard:nth-child(8)  { transition-delay: 0.32s; }
+.skillsGrid.visible .skillCard:nth-child(9)  { transition-delay: 0.35s; }
+.skillsGrid.visible .skillCard:nth-child(10) { transition-delay: 0.38s; }
 
 /* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
@@ -70,7 +70,7 @@
   background-color: var(--color-background-secondary);
   border: 3px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: all var(--transition-base);
+  transition: transform 0.3s var(--ease-spring), border-color 0.2s var(--ease-out-quart), box-shadow 0.3s var(--ease-out-quart);
   cursor: default;
   min-height: 140px;
 }

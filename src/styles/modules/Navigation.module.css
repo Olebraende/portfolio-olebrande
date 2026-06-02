@@ -42,7 +42,7 @@
   font-size: var(--font-base);
   font-weight: 500;
   opacity: 0.8;
-  transition: all var(--transition-fast);
+  transition: opacity 0.15s var(--ease-out-quart), color 0.15s var(--ease-out-quart);
   position: relative;
 }
 
@@ -83,7 +83,7 @@
   border: 2px solid var(--color-border);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: background-color 0.15s var(--ease-out-quart), border-color 0.15s var(--ease-out-quart), transform 0.2s var(--ease-spring);
   min-width: 45px;
 }
 
@@ -102,7 +102,7 @@
   background-color: transparent;
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-md);
-  transition: all var(--transition-base);
+  transition: background-color 0.2s var(--ease-out-quart), color 0.2s var(--ease-out-quart), transform 0.25s var(--ease-spring);
   letter-spacing: 0.5px;
 }
 
@@ -171,7 +171,7 @@
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-base);
+    transition: transform 0.35s var(--ease-out-expo), opacity 0.25s var(--ease-out-quart), visibility 0.35s;
     box-shadow: var(--shadow-lg);
   }
 

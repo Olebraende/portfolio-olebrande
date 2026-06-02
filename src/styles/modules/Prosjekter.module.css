@@ -11,7 +11,7 @@
   font-weight: 600;
   color: var(--color-text-muted);
   margin-bottom: var(--space-lg);
-  transition: all var(--transition-fast);
+  transition: color 0.15s var(--ease-out-quart), gap 0.2s var(--ease-spring);
 }
 
 .backBtn:hover {
@@ -76,7 +76,7 @@
   border: 1.5px solid var(--color-border);
   border-radius: 999px;
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: border-color 0.2s var(--ease-out-quart), color 0.2s var(--ease-out-quart), background 0.2s var(--ease-out-quart), transform 0.25s var(--ease-spring), box-shadow 0.25s var(--ease-out-quart);
   white-space: nowrap;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .projectsGrid.visible .cardWrapper {
-  animation: cardEnter 0.5s ease-out forwards;
+  animation: cardEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes cardEnter {

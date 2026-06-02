@@ -34,7 +34,7 @@
 }
 
 .projectsGrid.visible .cardWrapper {
-  animation: cardEnter 0.5s ease-out forwards;
+  animation: cardEnter 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes cardEnter {
@@ -76,7 +76,7 @@
   color: var(--color-text);
   border: 2px solid var(--color-accent);
   border-radius: var(--radius-md);
-  transition: all var(--transition-base);
+  transition: background-color 0.2s var(--ease-out-quart), transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-out-quart);
 }
 
 .ctaBtn:hover {
