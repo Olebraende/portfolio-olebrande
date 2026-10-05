@@ -6,9 +6,6 @@ export const no = {
     projectsTitle: 'Prosjekter',
     projectsDescription:
       'Et utvalg nettsider og apper jeg har bygget med React, Next.js og TypeScript, fra restaurantnettsider til oppgavebehandling.',
-    servicesTitle: 'Tjenester',
-    servicesDescription:
-      'Webutvikling, hosting og vedlikehold. Raske, universelt utformede og søkevennlige nettsider som er bygget for å vare.',
     contactTitle: 'Kontakt',
     contactDescription:
       'Har du et prosjekt eller en idé? Send meg en melding, så tar vi en prat om hva som trengs.',
@@ -29,7 +26,6 @@ export const no = {
   },
   nav: {
     projects: 'Prosjekter',
-    services: 'Tjenester',
     contact: 'Kontakt',
     cta: 'Ta kontakt',
   },
@@ -111,47 +107,12 @@ export const no = {
   building: {
     badge: 'Jobber med nå',
     title: 'Brænde-DEV',
-    text: 'En plattform for webutvikling og hosting, der jeg samler det jeg har lært i ett tilbud: design, utvikling og drift av raske nettsider.',
+    text: 'Et eget prosjekt der jeg bygger en plattform for webutvikling og hosting, og samler det jeg har lært om design, utvikling og drift av raske nettsider.',
   },
-  services: {
-    eyebrow: 'Tjenester',
-    title: 'Fra idé til nettside som er raskere enn konkurrentens.',
-    subtitle: 'Hva jeg kan hjelpe deg med.',
-    items: [
-      {
-        title: 'Webutvikling',
-        text: 'Skreddersydde nettsider og webapplikasjoner med Next.js, React og TypeScript. Bygget for hastighet, tilgjengelighet og søk.',
-        features: [
-          'Responsivt design for alle enheter',
-          'Next.js, React og TypeScript',
-          'SEO og strukturert data',
-          'WCAG 2.2-fokus',
-        ],
-      },
-      {
-        title: 'Hosting og oppsett',
-        text: 'Jeg setter opp og publiserer løsningen din på moderne infrastruktur, med eget domene, HTTPS og automatisk utrulling.',
-        features: [
-          'Rask hosting på globalt nettverk',
-          'Domene og SSL/HTTPS',
-          'Automatisk deploy fra Git',
-          'Overvåking av oppetid',
-        ],
-      },
-      {
-        title: 'Vedlikehold',
-        text: 'Nettsider er aldri «ferdige». Jeg holder løsningen oppdatert, sikker og rask, og gjør endringer når behovene dine endrer seg.',
-        features: [
-          'Oppdateringer og sikkerhet',
-          'Ytelsesmålinger og forbedringer',
-          'Små og store endringer',
-          'Rask respons på henvendelser',
-        ],
-      },
-    ],
-    ctaTitle: 'Har du et prosjekt i tankene?',
-    ctaText: 'Fortell meg hva du trenger, så får du et uforpliktende tilbud.',
-    ctaButton: 'Ta kontakt',
+  cta: {
+    title: 'Trenger du hjelp med noe?',
+    text: 'Har du en idé, et prosjekt eller et spørsmål om nettsider? Ta kontakt, så tar vi en prat.',
+    button: 'Ta kontakt',
   },
   contact: {
     eyebrow: 'Kontakt',

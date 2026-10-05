@@ -9,7 +9,6 @@ export default function Footer({ lang, dict }: { lang: Lang; dict: Dictionary })
   const year = new Date().getFullYear();
   const nav = [
     { path: '/prosjekter', label: dict.nav.projects },
-    { path: '/tjenester', label: dict.nav.services },
     { path: '/kontakt', label: dict.nav.contact },
   ];
 

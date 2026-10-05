@@ -26,6 +26,8 @@ const nextConfig: NextConfig = {
   // Norwegian lives at the root, English under /en. Both are served from app/[lang].
   async redirects() {
     return [
+      { source: '/tjenester', destination: '/kontakt', permanent: true },
+      { source: '/en/tjenester', destination: '/en/kontakt', permanent: true },
       { source: '/no', destination: '/', permanent: true },
       { source: '/no/:path*', destination: '/:path*', permanent: true },
     ];

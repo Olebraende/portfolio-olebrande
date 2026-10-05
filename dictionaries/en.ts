@@ -8,9 +8,6 @@ export const en: Dictionary = {
     projectsTitle: 'Projects',
     projectsDescription:
       'A selection of websites and apps I have built with React, Next.js and TypeScript, from restaurant sites to task management.',
-    servicesTitle: 'Services',
-    servicesDescription:
-      'Web development, hosting and maintenance. Fast, accessible and search-friendly websites built to last.',
     contactTitle: 'Contact',
     contactDescription:
       'Got a project or an idea? Send me a message and we will talk about what you need.',
@@ -31,7 +28,6 @@ export const en: Dictionary = {
   },
   nav: {
     projects: 'Projects',
-    services: 'Services',
     contact: 'Contact',
     cta: 'Get in touch',
   },
@@ -113,47 +109,12 @@ export const en: Dictionary = {
   building: {
     badge: 'Currently building',
     title: 'Brænde-DEV',
-    text: 'A platform for web development and hosting, where I gather what I have learned into one offering: design, development and operation of fast websites.',
+    text: 'A project of my own where I am building a platform for web development and hosting, bringing together what I have learned about designing, building and running fast websites.',
   },
-  services: {
-    eyebrow: 'Services',
-    title: "From idea to a website that's faster than the competition's.",
-    subtitle: 'What I can help you with.',
-    items: [
-      {
-        title: 'Web development',
-        text: 'Tailor-made websites and web apps with Next.js, React and TypeScript. Built for speed, accessibility and search.',
-        features: [
-          'Responsive design for every device',
-          'Next.js, React and TypeScript',
-          'SEO and structured data',
-          'WCAG 2.2 focus',
-        ],
-      },
-      {
-        title: 'Hosting and setup',
-        text: 'I set up and publish your site on modern infrastructure, with your own domain, HTTPS and automatic deployments.',
-        features: [
-          'Fast hosting on a global network',
-          'Domain and SSL/HTTPS',
-          'Automatic deploys from Git',
-          'Uptime monitoring',
-        ],
-      },
-      {
-        title: 'Maintenance',
-        text: 'Websites are never "finished". I keep your site updated, secure and fast, and make changes as your needs evolve.',
-        features: [
-          'Updates and security',
-          'Performance monitoring and improvements',
-          'Small and large changes',
-          'Quick response to requests',
-        ],
-      },
-    ],
-    ctaTitle: 'Have a project in mind?',
-    ctaText: 'Tell me what you need and you will get a no-obligation quote.',
-    ctaButton: 'Get in touch',
+  cta: {
+    title: 'Need a hand with something?',
+    text: 'Got an idea, a project or a question about websites? Get in touch and we will have a chat.',
+    button: 'Get in touch',
   },
   contact: {
     eyebrow: 'Contact',

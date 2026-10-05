@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { href } from '@/lib/i18n';
 import { SITE_URL } from '@/lib/site';
 
-const paths = ['/', '/prosjekter', '/tjenester', '/kontakt'];
+const paths = ['/', '/prosjekter', '/kontakt'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((p) => ({

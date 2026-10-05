@@ -33,9 +33,9 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       <Building dict={dict} />
       <CtaBand
         lang={lang}
-        title={dict.services.ctaTitle}
-        text={dict.services.ctaText}
-        button={dict.services.ctaButton}
+        title={dict.cta.title}
+        text={dict.cta.text}
+        button={dict.cta.button}
       />
     </>
   );

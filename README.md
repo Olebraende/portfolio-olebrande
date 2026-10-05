@@ -14,7 +14,7 @@ npm run lint
 ## Structure
 
 ```
-app/[lang]/        Pages (home, prosjekter, tjenester, kontakt) rendered per language
+app/[lang]/        Pages (home, prosjekter, kontakt) rendered per language
 app/api/contact/   Contact form endpoint (Resend)
 components/        UI components, each with a co-located CSS module
 dictionaries/      Norwegian and English copy
