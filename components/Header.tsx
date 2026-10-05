@@ -69,6 +69,7 @@ export default function Header({ lang, dict }: { lang: Lang; dict: Dictionary })
             className={styles.lang}
             aria-label={dict.common.switchLang}
             prefetch={false}
+            scroll={false}
           >
             {dict.common.langShort}
           </Link>

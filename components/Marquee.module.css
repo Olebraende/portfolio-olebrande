@@ -20,17 +20,31 @@
 .list li {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   padding: 1.4rem 2rem;
   font-family: var(--font-geist-mono), monospace;
   font-size: clamp(0.95rem, 0.9rem + 0.4vw, 1.15rem);
   color: var(--text-muted);
   white-space: nowrap;
+  transition: color 0.3s var(--ease);
+}
+.list li svg {
+  width: 1.6em;
+  height: 1.6em;
+  flex-shrink: 0;
+  transition: transform 0.4s var(--ease);
+}
+.list li:hover {
+  color: var(--hover);
+}
+.list li:hover svg {
+  transform: scale(1.15) rotate(-6deg);
 }
 .list li::after {
   content: '✦';
-  margin-left: 4rem;
+  margin-left: 2rem;
   color: var(--accent);
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 @keyframes scroll {
   to {

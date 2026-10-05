@@ -33,7 +33,7 @@ function CodeSnippet() {
           {'  '}a11y: <em>100</em>,
         </span>
         <span className={styles.l} style={lineStyle(4)}>
-          {'  '}coffee: <b>true</b>,
+          {'  '}hotChocolate: <b>true</b>,
         </span>
         <span className={styles.l} style={lineStyle(5)}>
           {'  '}openToWork: <b>true</b>
