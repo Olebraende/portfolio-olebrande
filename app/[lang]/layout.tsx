@@ -6,6 +6,7 @@ import { GITHUB_URL, LINKEDIN_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Consent from '@/components/Consent';
+import ScrollReset from '@/components/ScrollReset';
 import '../globals.css';
 
 export const viewport: Viewport = {
@@ -68,6 +69,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
           {dict.common.skip}
         </a>
         <div className="progress" aria-hidden="true" />
+        <ScrollReset />
         <Header lang={lang} dict={dict} />
         <main id="main">{children}</main>
         <Footer lang={lang} dict={dict} />
