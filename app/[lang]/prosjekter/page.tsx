@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import BackLink from '@/components/BackLink';
 import { alternates, getDictionary, resolveLang } from '@/lib/i18n';
 import { projects } from '@/lib/projects';
 import ProjectsGrid from '@/components/ProjectsGrid';
@@ -21,6 +22,7 @@ export default async function ProjectsPage({ params }: PageProps<'/[lang]/prosje
   return (
     <>
       <section className="page-hero container">
+        <BackLink lang={lang} dict={dict} />
         <p className="eyebrow">{dict.projects.eyebrow}</p>
         <h1>{dict.projects.pageTitle}</h1>
         <p>{dict.projects.pageSubtitle}</p>

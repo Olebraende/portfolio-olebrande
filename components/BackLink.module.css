@@ -1,0 +1,19 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: color 0.25s;
+}
+.link span {
+  transition: transform 0.3s var(--ease);
+}
+.link:hover {
+  color: var(--text);
+}
+.link:hover span {
+  transform: translateX(-4px);
+}

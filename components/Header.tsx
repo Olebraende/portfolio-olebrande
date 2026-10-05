@@ -15,6 +15,7 @@ export default function Header({ lang, dict }: { lang: Lang; dict: Dictionary })
   const otherLang: Lang = lang === 'no' ? 'en' : 'no';
 
   const links = [
+    { path: '/', label: dict.common.home },
     { path: '/prosjekter', label: dict.nav.projects },
     { path: '/tjenester', label: dict.nav.services },
     { path: '/kontakt', label: dict.nav.contact },

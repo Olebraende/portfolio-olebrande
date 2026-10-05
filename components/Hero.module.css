@@ -52,7 +52,7 @@
 .inner::before {
   content: '';
   position: absolute;
-  inset: -20vh -10vw;
+  inset: 0;
   z-index: -1;
   background: radial-gradient(500px circle at var(--mx) var(--my), rgba(255, 106, 77, 0.1), transparent 70%);
   pointer-events: none;

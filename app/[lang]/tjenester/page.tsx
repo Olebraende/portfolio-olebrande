@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import BackLink from '@/components/BackLink';
 import { alternates, getDictionary, resolveLang } from '@/lib/i18n';
 import CtaBand from '@/components/CtaBand';
 import Spotlight from '@/components/Spotlight';
@@ -24,6 +25,7 @@ export default async function ServicesPage({ params }: PageProps<'/[lang]/tjenes
   return (
     <>
       <section className="page-hero container">
+        <BackLink lang={lang} dict={dict} />
         <p className="eyebrow">{s.eyebrow}</p>
         <h1>{s.title}</h1>
         <p>{s.subtitle}</p>

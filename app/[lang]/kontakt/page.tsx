@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import BackLink from '@/components/BackLink';
 import { alternates, getDictionary, resolveLang } from '@/lib/i18n';
 import { GITHUB_URL, LINKEDIN_URL } from '@/lib/site';
 import ContactForm from '@/components/ContactForm';
@@ -25,6 +26,7 @@ export default async function ContactPage({ params }: PageProps<'/[lang]/kontakt
   return (
     <>
       <section className="page-hero container">
+        <BackLink lang={lang} dict={dict} />
         <p className="eyebrow">{c.eyebrow}</p>
         <h1>{c.title}</h1>
         <p>{c.subtitle}</p>
