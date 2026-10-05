@@ -5,7 +5,6 @@ import type { Dictionary } from '@/dictionaries/no';
 import { ArrowRight } from '@/app/icons';
 import HeroCard from './HeroCard';
 import HeroStats from './HeroStats';
-import Spotlight from './Spotlight';
 import styles from './Hero.module.css';
 
 const START = new Date(2024, 8, 1); // September 2024
@@ -50,7 +49,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
       <div className={styles.grid} aria-hidden="true" />
       <div className={styles.orb} aria-hidden="true" />
 
-      <Spotlight className={styles.inner}>
+      <div className={styles.inner}>
         <div className={`container ${styles.layout}`}>
           <div className={styles.copy}>
             <StatusPill>{hero.status}</StatusPill>
@@ -72,7 +71,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
 
           <HeroCard lang={lang} dict={dict} />
         </div>
-      </Spotlight>
+      </div>
 
       <a href="#stack" className={styles.scroll}>
         <span className="visually-hidden">{hero.scroll}</span>
