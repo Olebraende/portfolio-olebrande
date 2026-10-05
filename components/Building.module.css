@@ -1,0 +1,44 @@
+.box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 2.5rem;
+  align-items: center;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+.badge {
+  grid-column: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.25;
+  }
+}
+.title {
+  font-size: clamp(1.8rem, 1.2rem + 2.5vw, 3rem);
+}
+.box p {
+  color: var(--text-muted);
+  max-width: 58ch;
+}
+@media (max-width: 720px) {
+  .box {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,25 @@
+.wrap {
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  min-height: 100svh;
+  align-content: center;
+  padding-top: var(--header-h);
+}
+.code {
+  font-size: clamp(6rem, 25vw, 16rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.wrap h1 {
+  font-size: clamp(1.8rem, 1rem + 3vw, 3rem);
+}
+.wrap p:not(.code) {
+  color: var(--text-muted);
+  max-width: 50ch;
+}

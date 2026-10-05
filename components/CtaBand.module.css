@@ -1,0 +1,32 @@
+.band {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: grid;
+  justify-items: start;
+  gap: 1rem;
+  padding: clamp(2rem, 6vw, 5rem);
+  border-radius: calc(var(--radius-lg) + 8px);
+  border: 1px solid var(--border-strong);
+  background: radial-gradient(120% 140% at 100% 0%, rgba(255, 106, 77, 0.28), transparent 55%), var(--bg-card);
+}
+.band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(120deg, transparent 30%, #000);
+  -webkit-mask-image: linear-gradient(120deg, transparent 30%, #000);
+}
+.band h2 {
+  font-size: clamp(2rem, 1.2rem + 3.5vw, 4rem);
+  max-width: 16ch;
+}
+.band p {
+  color: var(--text-muted);
+  max-width: 48ch;
+  margin-bottom: 0.75rem;
+}

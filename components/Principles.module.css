@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+.card {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: border-color 0.4s var(--ease), transform 0.5s var(--ease);
+}
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(360px circle at var(--mx) var(--my), rgba(255, 106, 77, 0.14), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  pointer-events: none;
+}
+.card:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-4px);
+}
+.card:hover::before {
+  opacity: 1;
+}
+.num {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+.card h3 {
+  margin-top: 2.5rem;
+  font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+}
+.card p {
+  margin-top: 0.8rem;
+  max-width: 46ch;
+  color: var(--text-muted);
+}
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -44,7 +44,7 @@ export const no = {
     scroll: 'Rull ned',
     stats: {
       projects: 'prosjekter bygget',
-      months: 'måneder med daglig koding',
+      months: 'måneder med erfaring',
       lighthouse: 'Lighthouse-score',
     },
   },

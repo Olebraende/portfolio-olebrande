@@ -1,0 +1,70 @@
+.form {
+  display: grid;
+  gap: 1.1rem;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+.field label {
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.25s, background-color 0.25s, box-shadow 0.25s;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.field input:hover,
+.field textarea:hover {
+  border-color: var(--text-muted);
+}
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(255, 106, 77, 0.05);
+  box-shadow: 0 0 0 4px rgba(255, 106, 77, 0.15);
+}
+.form button {
+  justify-self: start;
+}
+.form button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+.msg {
+  min-height: 1.5em;
+  font-size: 0.95rem;
+}
+.ok {
+  color: var(--ok);
+}
+.err {
+  color: #ff8a80;
+}
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

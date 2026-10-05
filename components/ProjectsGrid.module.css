@@ -1,0 +1,39 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.chip {
+  min-height: 44px;
+  padding: 0.4rem 1.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: color 0.25s, background-color 0.25s, border-color 0.25s, transform 0.25s var(--ease);
+}
+.chip:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
+.chip[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 1.25rem;
+}
+.item {
+  animation: pop 0.5s var(--ease) both;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+}

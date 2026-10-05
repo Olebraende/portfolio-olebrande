@@ -1,0 +1,39 @@
+.banner {
+  position: fixed;
+  z-index: 70;
+  left: 1rem;
+  bottom: 1rem;
+  width: min(calc(100% - 2rem), 400px);
+  padding: 1.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: rgba(20, 20, 23, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  box-shadow: 0 20px 60px -20px #000;
+  animation: up 0.5s var(--ease) both;
+}
+.title {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.actions :global(.btn) {
+  flex: 1;
+  min-height: 44px;
+  padding-inline: 1rem;
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}

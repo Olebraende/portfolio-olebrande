@@ -1,0 +1,16 @@
+.label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.canvas {
+  user-select: none;
+  -webkit-user-select: none;
+  max-width: 100%;
+}
+.btn {
+  margin-top: 1rem;
+}
