@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     formats: ['image/avif', 'image/webp'],
+    qualities: [70, 75],
   },
   async headers() {
     return [
