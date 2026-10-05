@@ -45,7 +45,7 @@ export const no = {
     stats: {
       projects: 'prosjekter bygget',
       months: 'måneder med erfaring',
-      lighthouse: 'Lighthouse-score',
+      lighthouse: 'Lighthouse: UU, SEO og beste praksis',
     },
   },
   stack: {

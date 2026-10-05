@@ -10,12 +10,15 @@ export default function ProjectCard({
   lang,
   dict,
   priority = false,
+  headingLevel = 3,
 }: {
   project: Project;
   lang: Lang;
   dict: Dictionary;
   priority?: boolean;
+  headingLevel?: 2 | 3;
 }) {
+  const Heading = `h${headingLevel}` as const;
   const [w, h] = project.imageSize;
   return (
     <article className={styles.card} data-spot>
@@ -37,13 +40,13 @@ export default function ProjectCard({
             <li key={tag}>{dict.projects.tags[tag] ?? tag}</li>
           ))}
         </ul>
-        <h3 className={styles.title}>
+        <Heading className={styles.title}>
           <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.stretch}>
             {project.title}
             <span className="visually-hidden"> {dict.common.opensNew}</span>
             <ArrowUpRight className={styles.arrow} width={20} height={20} />
           </a>
-        </h3>
+        </Heading>
         <p className={styles.desc}>{project.description[lang]}</p>
         {project.githubUrl && (
           <a

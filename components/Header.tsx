@@ -34,7 +34,7 @@ export default function Header({ lang, dict }: { lang: Lang; dict: Dictionary })
   return (
     <header className={styles.header}>
       <div className={`container ${styles.bar}`}>
-        <Link href={href(lang)} className={styles.logo} aria-label={`Ole Mathias Brænde – ${dict.common.home}`}>
+        <Link href={href(lang)} className={styles.logo}>
           <span className={styles.mark} aria-hidden="true">
             OB
           </span>
