@@ -108,8 +108,8 @@ export const en: Dictionary = {
   },
   building: {
     badge: 'Currently building',
-    title: 'Brænde-DEV',
-    text: 'A project of my own where I am building a platform for web development and hosting, bringing together what I have learned about designing, building and running fast websites.',
+    title: 'Several client projects',
+    text: 'Alongside my own projects, I am building websites for clients right now. More of them will show up here once they have launched.',
   },
   cta: {
     title: 'Need a hand with something?',

@@ -106,8 +106,8 @@ export const no = {
   },
   building: {
     badge: 'Jobber med nå',
-    title: 'Brænde-DEV',
-    text: 'Et eget prosjekt der jeg bygger en plattform for webutvikling og hosting, og samler det jeg har lært om design, utvikling og drift av raske nettsider.',
+    title: 'Flere kundeprosjekter',
+    text: 'Ved siden av egne prosjekter bygger jeg nettsider for kunder akkurat nå. Flere av dem dukker opp her når de er lansert.',
   },
   cta: {
     title: 'Trenger du hjelp med noe?',
