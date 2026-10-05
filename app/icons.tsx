@@ -66,12 +66,6 @@ export const Close = (p: P) => (
     <path d="M6 6l12 12M18 6 6 18" />
   </svg>
 );
-export const Database = (p: P) => (
-  <svg {...base} {...p}>
-    <ellipse cx="12" cy="5" rx="8" ry="3" />
-    <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
-  </svg>
-);
 export const Universal = (p: P) => (
   <svg {...base} {...p}>
     <circle cx="12" cy="12" r="10" />

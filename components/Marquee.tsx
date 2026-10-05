@@ -6,11 +6,12 @@ import {
   siJavascript,
   siNextdotjs,
   siNodedotjs,
+  siPostgresql,
   siReact,
   siTypescript,
   siVercel,
 } from 'simple-icons';
-import { Database, Universal } from '@/app/icons';
+import { Universal } from '@/app/icons';
 import styles from './Marquee.module.css';
 
 type Tech = {
@@ -36,7 +37,7 @@ const stack: Tech[] = [
   { name: 'HTML', hover: hoverColor(siHtml5.hex), icon: brand(siHtml5) },
   { name: 'CSS', hover: hoverColor(siCss.hex), icon: brand(siCss) },
   { name: 'Node.js', hover: hoverColor(siNodedotjs.hex), icon: brand(siNodedotjs) },
-  { name: 'SQL', hover: '#ffb199', icon: <Database /> },
+  { name: 'PostgreSQL', hover: hoverColor(siPostgresql.hex), icon: brand(siPostgresql) },
   { name: 'Git', hover: hoverColor(siGit.hex), icon: brand(siGit) },
   { name: 'Figma', hover: hoverColor(siFigma.hex), icon: brand(siFigma) },
   { name: 'Vercel', hover: hoverColor(siVercel.hex), icon: brand(siVercel) },
