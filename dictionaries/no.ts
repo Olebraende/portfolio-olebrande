@@ -107,7 +107,7 @@ export const no = {
   building: {
     badge: 'Jobber med nå',
     title: 'Flere kundeprosjekter',
-    text: 'Ved siden av egne prosjekter bygger jeg nettsider for kunder akkurat nå. Flere av dem dukker opp her når de er lansert.',
+    text: 'Ved siden av egne prosjekter bygger jeg nettsider for flere uavhengige kunder akkurat nå. Flere av dem dukker opp her når de er lansert.',
   },
   cta: {
     title: 'Trenger du hjelp med noe?',

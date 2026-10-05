@@ -109,7 +109,7 @@ export const en: Dictionary = {
   building: {
     badge: 'Currently building',
     title: 'Several client projects',
-    text: 'Alongside my own projects, I am building websites for clients right now. More of them will show up here once they have launched.',
+    text: 'Alongside my own projects, I am building websites for several independent clients right now. More of them will show up here once they have launched.',
   },
   cta: {
     title: 'Need a hand with something?',
