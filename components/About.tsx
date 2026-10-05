@@ -1,29 +1,41 @@
 import type { Dictionary } from '@/dictionaries/no';
 import styles from './About.module.css';
 
-export default function About({ dict }: { dict: Dictionary }) {
-  const a = dict.about;
+type Fact = { label: string; value: string };
+
+function Paragraphs({ items }: { items: string[] }) {
+  return items.map((text) => <p key={text}>{text}</p>);
+}
+
+function FactList({ facts }: { facts: Fact[] }) {
   return (
-    <section className="section" aria-labelledby="about-title" id="about">
-      <div className={`container ${styles.grid}`}>
-        <div className="reveal">
-          <p className="eyebrow">{a.eyebrow}</p>
-          <h2 id="about-title" className="section-title">
-            {a.title}
-          </h2>
+    <dl className={styles.facts}>
+      {facts.map(({ label, value }) => (
+        <div key={label}>
+          <dt>{label}</dt>
+          <dd>{value}</dd>
         </div>
+      ))}
+    </dl>
+  );
+}
+
+export default function About({ dict }: { dict: Dictionary }) {
+  const { eyebrow, title, paragraphs, facts } = dict.about;
+
+  return (
+    <section id="about" className="section" aria-labelledby="about-title">
+      <div className={`container ${styles.grid}`}>
+        <header className="reveal">
+          <p className="eyebrow">{eyebrow}</p>
+          <h2 id="about-title" className="section-title">
+            {title}
+          </h2>
+        </header>
+
         <div className={`${styles.body} reveal`}>
-          {a.paragraphs.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-          <dl className={styles.facts}>
-            {a.facts.map((f) => (
-              <div key={f.label}>
-                <dt>{f.label}</dt>
-                <dd>{f.value}</dd>
-              </div>
-            ))}
-          </dl>
+          <Paragraphs items={paragraphs} />
+          <FactList facts={facts} />
         </div>
       </div>
     </section>
