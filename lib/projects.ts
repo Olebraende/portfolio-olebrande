@@ -41,8 +41,8 @@ export const projects: Project[] = [
     id: 'kroensji',
     title: 'Krønsji',
     description: {
-      no: 'Nettside for restauranten Krønsji med meny, ingredienser, allergener og konsept – i et design som speiler den sprø opplevelsen.',
-      en: 'Website for the restaurant Krønsji with menu, ingredients, allergens and concept – in a design that reflects the crispy experience.',
+      no: 'Nettside for restauranten Krønsji med meny, ingredienser, allergener og konsept, i et design som speiler den sprø opplevelsen.',
+      en: 'Website for the restaurant Krønsji with menu, ingredients, allergens and concept, in a design that reflects the crispy experience.',
     },
     image: '/pics/kroensji.png',
     imageSize: [1897, 1075],

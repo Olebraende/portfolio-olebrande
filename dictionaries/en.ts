@@ -2,12 +2,12 @@ import type { Dictionary } from './no';
 
 export const en: Dictionary = {
   meta: {
-    homeTitle: 'Ole Mathias Brænde – Frontend Developer | Next.js, React and TypeScript',
+    homeTitle: 'Ole Mathias Brænde, frontend developer | Next.js, React and TypeScript',
     homeDescription:
       'Frontend developer building fast, accessible and search-friendly websites with Next.js, React and TypeScript. See projects and get in touch.',
     projectsTitle: 'Projects',
     projectsDescription:
-      'A selection of websites and apps I have built with React, Next.js and TypeScript – from restaurant sites to task management.',
+      'A selection of websites and apps I have built with React, Next.js and TypeScript, from restaurant sites to task management.',
     servicesTitle: 'Services',
     servicesDescription:
       'Web development, hosting and maintenance. Fast, accessible and search-friendly websites built to last.',
@@ -55,9 +55,9 @@ export const en: Dictionary = {
   },
   about: {
     eyebrow: 'About me',
-    title: "I started in September 2024 – and haven't let go of the keyboard since.",
+    title: "I started in September 2024, and haven't let go of the keyboard since.",
     paragraphs: [
-      'What pulls me towards web development is that everything connects: design, performance, accessibility and code. I like digging into why a page feels slow, and fixing it properly – not with a shortcut.',
+      'What pulls me towards web development is that everything connects: design, performance, accessibility and code. I like digging into why a page feels slow, and fixing it properly, not with a shortcut.',
       'I build with Next.js, React and TypeScript, and I measure what I make: Core Web Vitals, WCAG and structured data are part of the job, not an afterthought.',
       'I learn fast, enjoy sharing knowledge, and do my best work on teams where people care about shipping something they are proud of.',
     ],
@@ -73,7 +73,7 @@ export const en: Dictionary = {
     items: [
       {
         title: 'Performance',
-        text: 'Pre-rendered HTML, minimal JavaScript and optimised images. The goal is green on every Core Web Vital – on a real phone, not just on a dev machine.',
+        text: 'Pre-rendered HTML, minimal JavaScript and optimised images. The goal is green on every Core Web Vital, on a real phone, not just on a dev machine.',
       },
       {
         title: 'Accessibility',
@@ -94,7 +94,7 @@ export const en: Dictionary = {
     title: "Things I've built.",
     viewAll: 'See all projects',
     pageTitle: 'Projects',
-    pageSubtitle: 'Everything I have built – from finished sites to experiments.',
+    pageSubtitle: 'Everything I have built, from finished sites to experiments.',
     filterLabel: 'Filter by technology',
     filterAll: 'All',
     empty: 'No projects in this category yet.',
@@ -113,7 +113,7 @@ export const en: Dictionary = {
   building: {
     badge: 'Currently building',
     title: 'Brænde-DEV',
-    text: 'A platform for web development and hosting – where I gather what I have learned into one offering: design, development and operation of fast websites.',
+    text: 'A platform for web development and hosting, where I gather what I have learned into one offering: design, development and operation of fast websites.',
   },
   services: {
     eyebrow: 'Services',
@@ -142,7 +142,7 @@ export const en: Dictionary = {
       },
       {
         title: 'Maintenance',
-        text: 'Websites are never "finished". I keep your site updated, secure and fast – and make changes as your needs evolve.',
+        text: 'Websites are never "finished". I keep your site updated, secure and fast, and make changes as your needs evolve.',
         features: [
           'Updates and security',
           'Performance monitoring and improvements',
@@ -185,7 +185,7 @@ export const en: Dictionary = {
   },
   notFound: {
     title: '404',
-    text: 'The page you are looking for does not exist – or it has moved.',
+    text: 'The page you are looking for does not exist, or it has moved.',
   },
   consent: {
     title: 'Cookies',

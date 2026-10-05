@@ -1,11 +1,11 @@
 export const no = {
   meta: {
-    homeTitle: 'Ole Mathias Brænde – Frontend-utvikler | Next.js, React og TypeScript',
+    homeTitle: 'Ole Mathias Brænde, frontend-utvikler | Next.js, React og TypeScript',
     homeDescription:
       'Frontend-utvikler som bygger raske, tilgjengelige og søkevennlige nettsider med Next.js, React og TypeScript. Se prosjekter og ta kontakt.',
     projectsTitle: 'Prosjekter',
     projectsDescription:
-      'Et utvalg nettsider og apper jeg har bygget med React, Next.js og TypeScript – fra restaurantnettsider til oppgavebehandling.',
+      'Et utvalg nettsider og apper jeg har bygget med React, Next.js og TypeScript, fra restaurantnettsider til oppgavebehandling.',
     servicesTitle: 'Tjenester',
     servicesDescription:
       'Webutvikling, hosting og vedlikehold. Raske, universelt utformede og søkevennlige nettsider som er bygget for å vare.',
@@ -53,9 +53,9 @@ export const no = {
   },
   about: {
     eyebrow: 'Om meg',
-    title: 'Jeg startet i september 2024 – og har ikke sluppet tastaturet siden.',
+    title: 'Jeg startet i september 2024, og har ikke sluppet tastaturet siden.',
     paragraphs: [
-      'Det som drar meg til webutvikling er at alt henger sammen: design, ytelse, tilgjengelighet og kode. Jeg liker å grave i hvorfor en side føles treg, og å fikse det på riktig måte – ikke bare med en snarvei.',
+      'Det som drar meg til webutvikling er at alt henger sammen: design, ytelse, tilgjengelighet og kode. Jeg liker å grave i hvorfor en side føles treg, og å fikse det på riktig måte, ikke bare med en snarvei.',
       'Jeg bygger med Next.js, React og TypeScript, og måler det jeg lager: Core Web Vitals, WCAG og strukturert data er en del av jobben, ikke noe jeg gjør til slutt.',
       'Jeg lærer raskt, deler gjerne kunnskap og trives best i team der folk bryr seg om å levere noe de er stolte av.',
     ],
@@ -71,7 +71,7 @@ export const no = {
     items: [
       {
         title: 'Ytelse',
-        text: 'Ferdig-generert HTML, minimalt med JavaScript og optimaliserte bilder. Målet er grønt på alle Core Web Vitals – på ekte mobil, ikke bare i utviklermiljøet.',
+        text: 'Ferdig-generert HTML, minimalt med JavaScript og optimaliserte bilder. Målet er grønt på alle Core Web Vitals, på ekte mobil, ikke bare i utviklermiljøet.',
       },
       {
         title: 'Universell utforming',
@@ -92,7 +92,7 @@ export const no = {
     title: 'Ting jeg har bygget.',
     viewAll: 'Se alle prosjekter',
     pageTitle: 'Prosjekter',
-    pageSubtitle: 'Alt jeg har bygget – fra ferdige nettsider til eksperimenter.',
+    pageSubtitle: 'Alt jeg har bygget, fra ferdige nettsider til eksperimenter.',
     filterLabel: 'Filtrer etter teknologi',
     filterAll: 'Alle',
     empty: 'Ingen prosjekter i denne kategorien ennå.',
@@ -111,7 +111,7 @@ export const no = {
   building: {
     badge: 'Jobber med nå',
     title: 'Brænde-DEV',
-    text: 'En plattform for webutvikling og hosting – der jeg samler det jeg har lært i ett tilbud: design, utvikling og drift av raske nettsider.',
+    text: 'En plattform for webutvikling og hosting, der jeg samler det jeg har lært i ett tilbud: design, utvikling og drift av raske nettsider.',
   },
   services: {
     eyebrow: 'Tjenester',
@@ -140,7 +140,7 @@ export const no = {
       },
       {
         title: 'Vedlikehold',
-        text: 'Nettsider er aldri «ferdige». Jeg holder løsningen oppdatert, sikker og rask – og gjør endringer når behovene dine endrer seg.',
+        text: 'Nettsider er aldri «ferdige». Jeg holder løsningen oppdatert, sikker og rask, og gjør endringer når behovene dine endrer seg.',
         features: [
           'Oppdateringer og sikkerhet',
           'Ytelsesmålinger og forbedringer',
@@ -183,7 +183,7 @@ export const no = {
   },
   notFound: {
     title: '404',
-    text: 'Siden du leter etter finnes ikke – eller den har flyttet.',
+    text: 'Siden du leter etter finnes ikke, eller den har flyttet.',
   },
   consent: {
     title: 'Informasjonskapsler',

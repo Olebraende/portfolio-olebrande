@@ -54,7 +54,7 @@ export default function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
             className={styles.code}
-            aria-label={`${project.title} – ${dict.common.viewCode} ${dict.common.opensNew}`}
+            aria-label={`${project.title}, ${dict.common.viewCode} ${dict.common.opensNew}`}
           >
             <Github width={16} height={16} /> {dict.common.viewCode}
           </a>
