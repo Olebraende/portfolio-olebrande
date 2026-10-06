@@ -49,6 +49,33 @@ export const projects: Project[] = [
       no: 'Konsept for et digitalt byrå, bygget for å vise avanserte frontend-teknikker: glassmorphism, scroll-drevne animasjoner og parallax. Alt innhold er fiktivt.',
       en: 'A digital agency concept built to showcase advanced frontend techniques: glassmorphism, scroll-driven animation and parallax. All content is fictional.',
     },
+    details: {
+      no: [
+        'Nuvora er et konseptnettsted for et fiktivt digitalt byrå. Jeg bygde det for å øve på og vise frem avanserte frontend-teknikker. Alt innhold er fiktivt.',
+        'Nettstedet har fem sider (forside, om oss, funksjoner, arbeider og kontakt) og er satt sammen av gjenbrukbare komponenter som hero, funksjonskort, showcase, tall som teller opp og et kundesitat.',
+        'Effektene er bygget som egne byggeklosser: glassmorfisme-kort, gradienttekst, parallakslag, avsløring når du scroller, fremdriftslinje for scrolling, en glød som følger markøren og jevn scrolling med Lenis.',
+      ],
+      en: [
+        'Nuvora is a concept website for a fictional digital agency. I built it to practise and show off advanced frontend techniques. All content is fictional.',
+        'The site has five pages (home, about, features, work and contact) and is composed of reusable components such as a hero, feature cards, a showcase, counting numbers and a customer quote.',
+        'The effects are built as separate building blocks: glassmorphism cards, gradient text, parallax layers, reveal on scroll, a scroll progress bar, a glow that follows the cursor and smooth scrolling with Lenis.',
+      ],
+    },
+    highlights: {
+      no: [
+        'Next.js 16 (App Router), React 19 og TypeScript',
+        'Gjenbrukbare effektkomponenter som GlassCard, ParallaxLayer og ScrollReveal',
+        'Jevn scrolling med Lenis',
+        'Animerte tall, fremdriftslinje og markørglød',
+      ],
+      en: [
+        'Next.js 16 (App Router), React 19 and TypeScript',
+        'Reusable effect components such as GlassCard, ParallaxLayer and ScrollReveal',
+        'Smooth scrolling with Lenis',
+        'Animated numbers, a progress bar and a cursor glow',
+      ],
+    },
+    year: '2026',
     image: '/pics/nuvora.png',
     imageSize: [3020, 1494],
     liveUrl: 'https://nuvora-phi.vercel.app/',
@@ -63,10 +90,33 @@ export const projects: Project[] = [
       no: 'Informasjonsside om Voldatunnelen på E39, med oppdatert informasjon om tunnelen, vegstrekningen og prosjektstatus til lokalmiljøet og de reisende.',
       en: 'An information site about the Voldatunnelen on E39, giving the community and travellers up-to-date information on the tunnel, the road and project status.',
     },
+    details: {
+      no: [
+        'Voldatunnelen er en uoffisiell informasjonsside om E39 Voldatunnelen mellom Volda og Furene. Siden samler fakta, kart og nyheter om tunnelprosjektet, som skal gi bedre trafikksikkerhet og frigjøre sentrum i Volda.',
+        'Jeg bygde siden i React med Vite og React Router. Kartet er laget med Leaflet, og siden har eget galleri, tidslinje, nyhetsseksjon og en side om selve prosjektet.',
+      ],
+      en: [
+        'Voldatunnelen is an unofficial information site about the E39 Voldatunnelen between Volda and Furene. It gathers facts, a map and news about the tunnel project, which aims to improve road safety and free up the centre of Volda.',
+        'I built the site in React with Vite and React Router. The map is made with Leaflet, and the site has its own gallery, timeline, news section and a page about the project itself.',
+      ],
+    },
+    highlights: {
+      no: [
+        'Interaktivt kart med Leaflet',
+        'Tidslinje, galleri og nyheter',
+        'Måling med Vercel Analytics og Speed Insights, bak samtykkebanner',
+      ],
+      en: [
+        'Interactive map with Leaflet',
+        'Timeline, gallery and news',
+        'Measured with Vercel Analytics and Speed Insights, behind a consent banner',
+      ],
+    },
+    year: '2026',
     image: '/pics/voldatunnelen.png',
     imageSize: [1820, 1240],
     liveUrl: 'https://www.voldatunnelen.no/',
-    tags: ['react', 'typescript', 'responsive'],
+    tags: ['react', 'javascript', 'responsive'],
   },
   {
     slug: 'kroensji',
@@ -76,66 +126,13 @@ export const projects: Project[] = [
       no: 'Nettside for restauranten Krønsji med meny, ingredienser, allergener og konsept, i et design som speiler den sprø opplevelsen.',
       en: 'Website for the restaurant Krønsji with menu, ingredients, allergens and concept, in a design that reflects the crispy experience.',
     },
-    image: '/pics/kroensji.png',
-    imageSize: [1897, 1075],
     archivedReason: {
       no: 'Nettsiden er tatt ned fordi restauranten har lagt ned driften.',
       en: 'The website has been taken down because the restaurant has closed.',
     },
+    image: '/pics/kroensji.png',
+    imageSize: [1897, 1075],
     tags: ['javascript', 'responsive', 'ui-ux'],
-  },
-  {
-    slug: 'flyt',
-    status: 'live',
-    title: 'Flyt',
-    description: {
-      no: 'Oppgavebehandling med visuell Kanban-tavle: dra-og-slipp, tidsregistrering, prioriteringer og søk. Flerspråklig, og dataene lagres lokalt.',
-      en: 'Task management with a visual Kanban board: drag and drop, time tracking, priorities and search. Multilingual, with data stored locally.',
-    },
-    image: '/pics/flyt-todo.png',
-    imageSize: [2555, 1274],
-    liveUrl: 'https://flyt-todo.netlify.app/',
-    githubUrl: 'https://github.com/Olebraende/todo',
-    tags: ['react', 'responsive', 'ui-ux'],
-  },
-  {
-    slug: 'fjell-kino',
-    status: 'live',
-    title: 'Fjell Kino',
-    description: {
-      no: 'Filmoversikt for et fiktivt kinoselskap, bygget i React med fokus på tilgjengelighet: bla i filmer, se kommende titler og bestill billetter.',
-      en: 'Movie overview for a fictional cinema, built in React with an accessibility focus: browse films, see upcoming titles and book tickets.',
-    },
-    image: '/pics/fjell-kino.png',
-    imageSize: [2551, 1431],
-    liveUrl: 'https://olem-kodehode4.github.io/Fjell-Kino/',
-    tags: ['react', 'responsive', 'accessibility', 'api'],
-  },
-  {
-    slug: 'adventskalender',
-    status: 'live',
-    title: 'Adventskalender',
-    description: {
-      no: 'Interaktiv adventskalender i HTML, CSS og JavaScript. Hver dag åpnes en ny luke med overraskelser og aktiviteter.',
-      en: 'An interactive advent calendar in HTML, CSS and JavaScript. Each day opens a new door with surprises and activities.',
-    },
-    image: '/pics/calendar.png',
-    imageSize: [1920, 1080],
-    liveUrl: 'https://olem-kodehode4.github.io/juleoppgave/',
-    tags: ['javascript'],
-  },
-  {
-    slug: 'pong',
-    status: 'live',
-    title: 'Pong',
-    description: {
-      no: 'Klassisk pong i HTML, CSS og JavaScript. Viser grunnleggende spillmekanikk og canvas-animasjon.',
-      en: 'Classic pong in HTML, CSS and JavaScript. Demonstrates basic game mechanics and canvas animation.',
-    },
-    image: '/pics/pong-game.png',
-    imageSize: [1920, 1080],
-    liveUrl: 'https://olebraende.github.io/Pong-Game/',
-    tags: ['javascript'],
   },
 ];
 
