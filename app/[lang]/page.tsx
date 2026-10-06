@@ -3,6 +3,7 @@ import { alternates, getDictionary, resolveLang } from '@/lib/i18n';
 import Hero from '@/components/Hero';
 import Marquee from '@/components/Marquee';
 import About from '@/components/About';
+import Experience from '@/components/Experience';
 import Principles from '@/components/Principles';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import Building from '@/components/Building';
@@ -28,6 +29,7 @@ export default async function HomePage({ params }: PageProps<'/[lang]'>) {
       <Hero lang={lang} dict={dict} />
       <Marquee label={dict.stack.label} />
       <About dict={dict} />
+      <Experience dict={dict} />
       <Principles dict={dict} />
       <FeaturedProjects lang={lang} dict={dict} />
       <Building dict={dict} />
