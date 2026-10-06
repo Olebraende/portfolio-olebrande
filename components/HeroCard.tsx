@@ -16,7 +16,8 @@ function WindowBar() {
   );
 }
 
-function CodeSnippet() {
+function CodeSnippet({ lang }: { lang: Lang }) {
+  const cares = lang === 'no' ? 'ytelse' : 'performance';
   return (
     <pre className={styles.code} aria-hidden="true">
       <code>
@@ -27,18 +28,21 @@ function CodeSnippet() {
           {'  '}stack: [<s>&quot;Next.js&quot;</s>, <s>&quot;React&quot;</s>, <s>&quot;TypeScript&quot;</s>],
         </span>
         <span className={styles.l} style={lineStyle(2)}>
-          {'  '}cares: [<s>&quot;ytelse&quot;</s>, <s>&quot;a11y&quot;</s>, <s>&quot;SEO&quot;</s>],
+          {'  '}cares: [<s>&quot;{cares}&quot;</s>, <s>&quot;a11y&quot;</s>, <s>&quot;SEO&quot;</s>],
         </span>
         <span className={styles.l} style={lineStyle(3)}>
-          {'  '}lighthouse: <em>100</em>,
+          {'  '}a11y: <em>100</em>,
         </span>
         <span className={styles.l} style={lineStyle(4)}>
-          {'  '}hotChocolate: <b>true</b>,
+          {'  '}lighthouse: <em>100</em>,
         </span>
         <span className={styles.l} style={lineStyle(5)}>
-          {'  '}openToWork: <b>true</b>
+          {'  '}hotChocolate: <b>true</b>,
         </span>
         <span className={styles.l} style={lineStyle(6)}>
+          {'  '}openToWork: <b>true</b>
+        </span>
+        <span className={styles.l} style={lineStyle(7)}>
           {'}'};<span className={styles.caret} />
         </span>
       </code>
@@ -69,7 +73,7 @@ export default function HeroCard({ lang, dict }: { lang: Lang; dict: Dictionary 
           </div>
         </div>
 
-        <CodeSnippet />
+        <CodeSnippet lang={lang} />
 
         <a
           href={GITHUB_URL}
