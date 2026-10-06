@@ -97,20 +97,43 @@
   font-size: 0.95rem;
   flex: 1;
 }
-.code {
+.ext {
   position: relative;
   z-index: 3;
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   min-height: 44px;
-  margin-top: 0.75rem;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.82rem;
   color: var(--text-muted);
   transition: color 0.25s;
 }
-.code:hover {
+.ext:hover {
+  color: var(--accent);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.media {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: 0.9rem;
+  left: 0.9rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: rgba(10, 10, 11, 0.85);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: var(--accent);
 }

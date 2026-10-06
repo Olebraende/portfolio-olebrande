@@ -25,7 +25,7 @@ export default function FeaturedProjects({ lang, dict }: { lang: Lang; dict: Dic
 
         <Spotlight as="ul" className={styles.grid}>
           {featuredProjects.map((p) => (
-            <li key={p.id} className="reveal">
+            <li key={p.slug} className="reveal">
               <ProjectCard project={p} lang={lang} dict={dict} />
             </li>
           ))}

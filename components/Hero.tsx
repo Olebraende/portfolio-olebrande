@@ -40,7 +40,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
   const { hero } = dict;
 
   const stats = [
-    { value: projects.length, label: hero.stats.projects },
+    { value: projects.filter((p) => p.status === 'live').length, label: hero.stats.projects },
     { value: monthsSinceStart(), suffix: '+', label: hero.stats.months },
     { value: 100, label: hero.stats.lighthouse },
   ];

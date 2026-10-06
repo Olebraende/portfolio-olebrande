@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Prom
   return {
     metadataBase: new URL(SITE_URL),
     applicationName: SITE_NAME,
+    title: { template: `%s | ${SITE_NAME}`, default: SITE_NAME },
     authors: [{ name: SITE_NAME, url: SITE_URL }],
     creator: SITE_NAME,
     openGraph: {

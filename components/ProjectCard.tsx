@@ -1,9 +1,36 @@
-import Image from 'next/image';
-import type { Lang } from '@/lib/i18n';
+import Link from 'next/link';
+import { href, type Lang } from '@/lib/i18n';
 import type { Project } from '@/lib/projects';
 import type { Dictionary } from '@/dictionaries/no';
-import { ArrowUpRight, Github } from '@/app/icons';
+import { ArrowRight, ArrowUpRight, Github } from '@/app/icons';
+import ProjectMedia from './ProjectMedia';
 import styles from './ProjectCard.module.css';
+
+function ExternalLink({
+  url,
+  label,
+  project,
+  dict,
+  children,
+}: {
+  url: string;
+  label: string;
+  project: Project;
+  dict: Dictionary;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={styles.ext}
+      aria-label={`${project.title}, ${label} ${dict.common.opensNew}`}
+    >
+      {children}
+    </a>
+  );
+}
 
 export default function ProjectCard({
   project,
@@ -19,46 +46,49 @@ export default function ProjectCard({
   headingLevel?: 2 | 3;
 }) {
   const Heading = `h${headingLevel}` as const;
-  const [w, h] = project.imageSize;
+  const comingSoon = project.status === 'coming-soon';
+
   return (
     <article className={styles.card} data-spot>
       <div className={styles.media}>
-        <Image
-          src={project.image}
-          alt=""
-          width={w}
-          height={h}
+        <ProjectMedia
+          project={project}
+          dict={dict}
           sizes="(min-width: 1000px) 380px, (min-width: 640px) 50vw, 100vw"
-          quality={70}
           priority={priority}
           className={styles.img}
         />
+        {comingSoon && <span className={styles.badge}>{dict.projects.status['coming-soon']}</span>}
       </div>
+
       <div className={styles.body}>
         <ul className={styles.tags} aria-label="Tags">
           {project.tags.map((tag) => (
             <li key={tag}>{dict.projects.tags[tag] ?? tag}</li>
           ))}
         </ul>
+
         <Heading className={styles.title}>
-          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.stretch}>
+          <Link href={href(lang, `/prosjekter/${project.slug}`)} className={styles.stretch}>
             {project.title}
-            <span className="visually-hidden"> {dict.common.opensNew}</span>
-            <ArrowUpRight className={styles.arrow} width={20} height={20} />
-          </a>
+            <ArrowRight className={styles.arrow} width={20} height={20} />
+          </Link>
         </Heading>
+
         <p className={styles.desc}>{project.description[lang]}</p>
-        {project.githubUrl && (
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.code}
-            aria-label={`${project.title}, ${dict.common.viewCode} ${dict.common.opensNew}`}
-          >
-            <Github width={16} height={16} /> {dict.common.viewCode}
-          </a>
-        )}
+
+        <div className={styles.links}>
+          {project.liveUrl && !comingSoon && (
+            <ExternalLink url={project.liveUrl} label={dict.common.viewLive} project={project} dict={dict}>
+              <ArrowUpRight width={16} height={16} /> {dict.common.viewLive}
+            </ExternalLink>
+          )}
+          {project.githubUrl && (
+            <ExternalLink url={project.githubUrl} label={dict.common.viewCode} project={project} dict={dict}>
+              <Github width={16} height={16} /> {dict.common.viewCode}
+            </ExternalLink>
+          )}
+        </div>
       </div>
     </article>
   );

@@ -43,7 +43,7 @@ export default function ProjectsGrid({
 
       <Spotlight as="ul" className={styles.grid}>
         {visible.map((p, i) => (
-          <li key={p.id} className={styles.item}>
+          <li key={p.slug} className={styles.item}>
             <ProjectCard project={p} lang={lang} dict={dict} priority={i < 3} headingLevel={2} />
           </li>
         ))}

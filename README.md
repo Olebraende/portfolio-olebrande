@@ -28,7 +28,7 @@ Requires Node.js 20.9 or newer.
 ## Structure
 
 ```text
-app/[lang]/          Pages (home, prosjekter, kontakt), 404 and share image, rendered per language
+app/[lang]/          Pages (home, prosjekter, project detail, kontakt), 404 and share image, per language
 app/api/contact/     Contact form endpoint (Resend)
 app/icon.svg         Favicon (apple-icon.tsx generates the touch icon)
 components/          UI components, each with a co-located CSS module
@@ -45,8 +45,38 @@ Both languages are served from `app/[lang]`. Norwegian URLs stay unprefixed thro
 ### Content
 
 - Copy lives in `dictionaries/no.ts` and `dictionaries/en.ts`. Keep both in sync, the English file is typed against the Norwegian one.
-- Projects live in `lib/projects.ts`. Add a screenshot to `public/pics/` and an entry with Norwegian and English descriptions.
+- Projects live in `lib/projects.ts`, see [Projects](#projects).
 - Work experience and the other sections are driven by the dictionaries as well.
+
+## Projects
+
+Every project is one entry in `lib/projects.ts`. The card, the detail page at `/prosjekter/<slug>`, the filters, the sitemap and the structured data are all generated from it.
+
+**Add a project:** copy an entry, give it a unique `slug`, and add a screenshot to `public/pics/` (optional, a placeholder is drawn without one).
+
+```ts
+{
+  slug: 'my-project',
+  title: 'My project',
+  status: 'live',               // or 'coming-soon'
+  description: { no: '...', en: '...' },
+  details: { no: ['Paragraph one', 'Paragraph two'], en: ['...', '...'] },  // optional
+  highlights: { no: ['...'], en: ['...'] },                                  // optional
+  role: { no: 'Utvikler', en: 'Developer' },                                 // optional
+  year: '2026',                                                              // optional
+  image: '/pics/my-project.png',
+  imageSize: [1920, 1080],
+  liveUrl: 'https://example.com',
+  githubUrl: 'https://github.com/...',
+  tags: ['nextjs', 'typescript'],
+},
+```
+
+Tags shown to visitors are translated in `dictionaries/` under `projects.tags`, add a label there for any new tag.
+
+**Coming soon:** set `status: 'coming-soon'`. The card gets a badge, the live link is hidden and the project does not count towards the number of finished projects on the front page.
+
+**Remove a project:** delete its entry. Keep slugs stable once a page is live, or add a redirect in `next.config.ts` so old links keep working.
 
 ## Environment variables
 

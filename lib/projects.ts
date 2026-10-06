@@ -1,19 +1,43 @@
 import type { Lang } from './i18n';
 
+export type ProjectStatus = 'live' | 'coming-soon';
+
+type Localized<T> = Record<Lang, T>;
+
+/**
+ * One entry per project. To add a project, copy an entry below, give it a unique `slug`
+ * and drop the screenshot in `public/pics/`. The card, the detail page at
+ * `/prosjekter/<slug>`, the sitemap and the filters all pick it up from here.
+ * To remove a project, delete its entry.
+ *
+ * Only `slug`, `title`, `status`, `description` and `tags` are required. The optional
+ * fields (`details`, `highlights`, `role`, `year`) add sections to the detail page.
+ */
 export type Project = {
-  id: string;
+  /** URL segment, lower case with dashes. Keep it stable once the page is live. */
+  slug: string;
   title: string;
-  description: Record<Lang, string>;
-  image: string;
-  imageSize: [number, number];
-  liveUrl: string;
+  /** `coming-soon` shows a badge, hides the live link and keeps the page out of "live" counts. */
+  status: ProjectStatus;
+  /** Short text used on cards and in meta descriptions. */
+  description: Localized<string>;
+  /** Longer text for the detail page, one string per paragraph. */
+  details?: Localized<string[]>;
+  highlights?: Localized<string[]>;
+  role?: Localized<string>;
+  year?: string;
+  /** Screenshot in `public/pics/`. Without one, a placeholder is drawn. */
+  image?: string;
+  imageSize?: [number, number];
+  liveUrl?: string;
   githubUrl?: string;
   tags: string[];
 };
 
 export const projects: Project[] = [
   {
-    id: 'nuvora',
+    slug: 'nuvora',
+    status: 'live',
     title: 'Nuvora',
     description: {
       no: 'Konsept for et digitalt byrå, bygget for å vise avanserte frontend-teknikker: glassmorphism, scroll-drevne animasjoner og parallax. Alt innhold er fiktivt.',
@@ -26,7 +50,8 @@ export const projects: Project[] = [
     tags: ['nextjs', 'typescript', 'animation', 'ui-ux'],
   },
   {
-    id: 'voldatunnelen',
+    slug: 'voldatunnelen',
+    status: 'live',
     title: 'Voldatunnelen',
     description: {
       no: 'Informasjonsside om Voldatunnelen på E39, med oppdatert informasjon om tunnelen, vegstrekningen og prosjektstatus til lokalmiljøet og de reisende.',
@@ -38,7 +63,8 @@ export const projects: Project[] = [
     tags: ['react', 'typescript', 'responsive'],
   },
   {
-    id: 'kroensji',
+    slug: 'kroensji',
+    status: 'live',
     title: 'Krønsji',
     description: {
       no: 'Nettside for restauranten Krønsji med meny, ingredienser, allergener og konsept, i et design som speiler den sprø opplevelsen.',
@@ -50,7 +76,8 @@ export const projects: Project[] = [
     tags: ['javascript', 'responsive', 'ui-ux'],
   },
   {
-    id: 'flyt',
+    slug: 'flyt',
+    status: 'live',
     title: 'Flyt',
     description: {
       no: 'Oppgavebehandling med visuell Kanban-tavle: dra-og-slipp, tidsregistrering, prioriteringer og søk. Flerspråklig, og dataene lagres lokalt.',
@@ -63,7 +90,8 @@ export const projects: Project[] = [
     tags: ['react', 'responsive', 'ui-ux'],
   },
   {
-    id: 'fjell-kino',
+    slug: 'fjell-kino',
+    status: 'live',
     title: 'Fjell Kino',
     description: {
       no: 'Filmoversikt for et fiktivt kinoselskap, bygget i React med fokus på tilgjengelighet: bla i filmer, se kommende titler og bestill billetter.',
@@ -75,7 +103,8 @@ export const projects: Project[] = [
     tags: ['react', 'responsive', 'accessibility', 'api'],
   },
   {
-    id: 'adventskalender',
+    slug: 'adventskalender',
+    status: 'live',
     title: 'Adventskalender',
     description: {
       no: 'Interaktiv adventskalender i HTML, CSS og JavaScript. Hver dag åpnes en ny luke med overraskelser og aktiviteter.',
@@ -87,7 +116,8 @@ export const projects: Project[] = [
     tags: ['javascript'],
   },
   {
-    id: 'pong',
+    slug: 'pong',
+    status: 'live',
     title: 'Pong',
     description: {
       no: 'Klassisk pong i HTML, CSS og JavaScript. Viser grunnleggende spillmekanikk og canvas-animasjon.',
@@ -100,5 +130,17 @@ export const projects: Project[] = [
   },
 ];
 
-/** The three highlighted on the front page. */
-export const featuredProjects = projects.slice(0, 3);
+export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
+
+/** The three highlighted on the front page: the first live projects in the list above. */
+export const featuredProjects = projects.filter((p) => p.status === 'live').slice(0, 3);
+
+/** Neighbours in list order, wrapping around, for the previous/next links. */
+export function getNeighbours(slug: string) {
+  const index = projects.findIndex((p) => p.slug === slug);
+  const count = projects.length;
+  return {
+    previous: projects[(index - 1 + count) % count],
+    next: projects[(index + 1) % count],
+  };
+}
