@@ -42,7 +42,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
   const stats = [
     { value: builtProjectCount, label: hero.stats.projects },
     { value: monthsSinceStart(), suffix: '+', label: hero.stats.months },
-    { value: 100, suffix: '/100', label: hero.stats.lighthouse },
+    { value: 100, label: hero.stats.lighthouse },
   ];
 
   return (
