@@ -23,14 +23,12 @@ export async function generateMetadata({ params }: LayoutProps<'/[lang]'>): Prom
     applicationName: SITE_NAME,
     authors: [{ name: SITE_NAME, url: SITE_URL }],
     creator: SITE_NAME,
-    icons: { icon: '/pics/pic-ole-1.jpg' },
     openGraph: {
       type: 'website',
       siteName: SITE_NAME,
       locale: ogLocale(lang),
-      images: [{ url: '/pics/og-preview.png', width: 2984, height: 1502, alt: SITE_NAME }],
     },
-    twitter: { card: 'summary_large_image', images: ['/pics/og-preview.png'] },
+    twitter: { card: 'summary_large_image' },
   };
 }
 

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { href, type Lang } from '@/lib/i18n';
 import type { Dictionary } from '@/dictionaries/no';
 import { Close, Menu } from '@/app/icons';
+import LogoMark from './LogoMark';
 import styles from './Header.module.css';
 
 export default function Header({ lang, dict }: { lang: Lang; dict: Dictionary }) {
@@ -35,8 +36,8 @@ export default function Header({ lang, dict }: { lang: Lang; dict: Dictionary })
     <header className={styles.header}>
       <div className={`container ${styles.bar}`}>
         <Link href={href(lang)} className={styles.logo}>
-          <span className={styles.mark} aria-hidden="true">
-            OB
+          <span className={styles.mark}>
+            <LogoMark />
           </span>
           <span className={styles.name}>Ole Mathias Brænde</span>
         </Link>

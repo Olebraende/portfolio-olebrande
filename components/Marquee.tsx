@@ -1,5 +1,6 @@
 import {
   siCss,
+  siExpress,
   siFigma,
   siGit,
   siHtml5,
@@ -27,7 +28,12 @@ const brand = (icon: { path: string; hex: string }) => (
   </svg>
 );
 
-const hoverColor = (hex: string) => (['000000', '181717'].includes(hex) ? '#ffffff' : `#${hex}`);
+/** Brand colour on hover, but near-black brands (Next.js, Vercel, Express) turn white to stay visible. */
+const hoverColor = (hex: string) => {
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16));
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  return brightness < 60 ? '#ffffff' : `#${hex}`;
+};
 
 const stack: Tech[] = [
   { name: 'Next.js', hover: hoverColor(siNextdotjs.hex), icon: brand(siNextdotjs) },
@@ -37,6 +43,7 @@ const stack: Tech[] = [
   { name: 'HTML', hover: hoverColor(siHtml5.hex), icon: brand(siHtml5) },
   { name: 'CSS', hover: hoverColor(siCss.hex), icon: brand(siCss) },
   { name: 'Node.js', hover: hoverColor(siNodedotjs.hex), icon: brand(siNodedotjs) },
+  { name: 'Express', hover: hoverColor(siExpress.hex), icon: brand(siExpress) },
   { name: 'PostgreSQL', hover: hoverColor(siPostgresql.hex), icon: brand(siPostgresql) },
   { name: 'Git', hover: hoverColor(siGit.hex), icon: brand(siGit) },
   { name: 'Figma', hover: hoverColor(siFigma.hex), icon: brand(siFigma) },

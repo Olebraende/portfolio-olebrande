@@ -50,15 +50,6 @@
 }
 .mark {
   display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.8rem;
-  font-weight: 700;
   transition: transform 0.4s var(--ease);
 }
 .logo:hover .mark {

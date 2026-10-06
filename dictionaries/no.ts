@@ -164,7 +164,6 @@ export const no = {
     title: 'Bygget med omtanke i Norge.',
     text: 'Jeg startet med frontend i september 2024, drevet av nysgjerrighet. Siden har jeg bygget stadig mer, og lært noe nytt hver eneste uke.',
     rights: 'Alle rettigheter reservert.',
-    built: 'Bygget med Next.js og hostet på Vercel.',
     backToTop: 'Til toppen',
     social: 'Sosiale medier',
   },

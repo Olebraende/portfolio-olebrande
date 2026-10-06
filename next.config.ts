@@ -36,14 +36,14 @@ const nextConfig: NextConfig = {
       { source: '/tjenester', destination: '/kontakt', permanent: true },
       { source: '/en/tjenester', destination: '/en/kontakt', permanent: true },
       { source: '/no', destination: '/', permanent: true },
-      { source: '/no/:path*', destination: '/:path*', permanent: true },
+      { source: '/no/:path((?!opengraph-image).*)', destination: '/:path', permanent: true },
     ];
   },
   async rewrites() {
     return {
       beforeFiles: [
         { source: '/', destination: '/no' },
-        { source: '/:path((?!en$|en/|no$|no/|api/|_next/|pics/)[^.]*)', destination: '/no/:path' },
+        { source: '/:path((?!en$|en/|no$|no/|api/|_next/|pics/|opengraph-image|twitter-image|apple-icon)[^.]*)', destination: '/no/:path' },
       ],
       afterFiles: [],
       fallback: [],

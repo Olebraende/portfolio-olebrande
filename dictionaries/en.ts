@@ -166,7 +166,6 @@ export const en: Dictionary = {
     title: 'Built with care in Norway.',
     text: 'I started with frontend in September 2024, driven by curiosity. Since then I have built more and more, and learned something new every single week.',
     rights: 'All rights reserved.',
-    built: 'Built with Next.js and hosted on Vercel.',
     backToTop: 'Back to top',
     social: 'Social media',
   },

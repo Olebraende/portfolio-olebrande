@@ -53,7 +53,6 @@ export default function Footer({ lang, dict }: { lang: Lang; dict: Dictionary })
         <p>
           © {year} Ole Mathias Brænde. {dict.footer.rights}
         </p>
-        <p>{dict.footer.built}</p>
         <a href="#main" className={styles.top}>
           {dict.footer.backToTop} <ArrowUp width={16} height={16} />
         </a>
