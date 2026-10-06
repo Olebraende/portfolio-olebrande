@@ -92,24 +92,28 @@ export const projects: Project[] = [
     },
     details: {
       no: [
-        'Voldatunnelen er en uoffisiell informasjonsside om E39 Voldatunnelen mellom Volda og Furene. Siden samler fakta, kart og nyheter om tunnelprosjektet, som skal gi bedre trafikksikkerhet og frigjøre sentrum i Volda.',
-        'Jeg bygde siden i React med Vite og React Router. Kartet er laget med Leaflet, og siden har eget galleri, tidslinje, nyhetsseksjon og en side om selve prosjektet.',
+        'Voldatunnelen er en uoffisiell informasjonsside om E39 Voldatunnelen, et planlagt vegprosjekt mellom Volda sentrum og Furene i Møre og Romsdal. Siden samler fakta, kart og nyheter om prosjektet, som skal gi bedre trafikksikkerhet og frigjøre sentrum i Volda.',
+        'Jeg bygde siden i React med Vite, React Router og CSS Modules. Siden har kart, galleri, tidslinje, nyhetsseksjon og en egen side om prosjektet.',
+        'Personvern er tatt på alvor: kartet bruker Leaflet med OpenStreetMap, og Google Analytics lastes først etter eksplisitt samtykke.',
       ],
       en: [
-        'Voldatunnelen is an unofficial information site about the E39 Voldatunnelen between Volda and Furene. It gathers facts, a map and news about the tunnel project, which aims to improve road safety and free up the centre of Volda.',
-        'I built the site in React with Vite and React Router. The map is made with Leaflet, and the site has its own gallery, timeline, news section and a page about the project itself.',
+        'Voldatunnelen is an unofficial information site about the E39 Voldatunnelen, a planned road project between Volda centre and Furene in Møre og Romsdal. It gathers facts, a map and news about the project, which aims to improve road safety and free up the centre of Volda.',
+        'I built the site in React with Vite, React Router and CSS Modules. It has a map, a gallery, a timeline, a news section and a page about the project itself.',
+        'Privacy is taken seriously: the map uses Leaflet with OpenStreetMap, and Google Analytics only loads after explicit consent.',
       ],
     },
     highlights: {
       no: [
-        'Interaktivt kart med Leaflet',
+        'Interaktivt kart med Leaflet og OpenStreetMap, uten tredjeparts sporing',
         'Tidslinje, galleri og nyheter',
-        'Måling med Vercel Analytics og Speed Insights, bak samtykkebanner',
+        'Google Analytics kun etter samtykke',
+        'Hostet på Vercel med CSP-headere',
       ],
       en: [
-        'Interactive map with Leaflet',
+        'Interactive map with Leaflet and OpenStreetMap, without third-party tracking',
         'Timeline, gallery and news',
-        'Measured with Vercel Analytics and Speed Insights, behind a consent banner',
+        'Google Analytics only after consent',
+        'Hosted on Vercel with CSP headers',
       ],
     },
     year: '2026',
@@ -126,6 +130,33 @@ export const projects: Project[] = [
       no: 'Nettside for restauranten Krønsji med meny, ingredienser, allergener og konsept, i et design som speiler den sprø opplevelsen.',
       en: 'Website for the restaurant Krønsji with menu, ingredients, allergens and concept, in a design that reflects the crispy experience.',
     },
+    details: {
+      no: [
+        'Krønsji er en nettside for en restaurant i Ørsta som serverer fried chicken og mer. Siden viser hele menyen, åpningstider, adresse, sosiale medier og en egen seksjon om allergier.',
+        'Menyen kan filtreres på kategorier som burger, wraps, croissants, baguette, falafel, wings og pizza, og du kan søke etter retter. Det er også en kontaktside og en «ring og bestill»-knapp.',
+        'Nettsiden er bygget i ren HTML, CSS og JavaScript uten rammeverk, og ble laget i Kodehode-gruppen hos JobLoop. Statistikk lastes først etter at du har godtatt informasjonskapsler.',
+      ],
+      en: [
+        'Krønsji is a website for a restaurant in Ørsta serving fried chicken and more. It shows the full menu, opening hours, address, social media and a dedicated allergens section.',
+        'The menu can be filtered by categories such as burger, wraps, croissants, baguette, falafel, wings and pizza, and you can search for dishes. There is also a contact page and a "call to order" button.',
+        'The site is built in plain HTML, CSS and JavaScript without a framework, and was made in the Kodehode group at JobLoop. Analytics only loads after you accept cookies.',
+      ],
+    },
+    highlights: {
+      no: [
+        'Meny som kan filtreres og søkes i',
+        'Allergiinformasjon og åpningstider',
+        'Ren HTML, CSS og JavaScript uten rammeverk',
+        'Samtykke for informasjonskapsler før statistikk lastes',
+      ],
+      en: [
+        'Menu you can filter and search',
+        'Allergen information and opening hours',
+        'Plain HTML, CSS and JavaScript, no framework',
+        'Cookie consent before analytics loads',
+      ],
+    },
+    year: '2025',
     archivedReason: {
       no: 'Nettsiden er tatt ned fordi restauranten har lagt ned driften.',
       en: 'The website has been taken down because the restaurant has closed.',
