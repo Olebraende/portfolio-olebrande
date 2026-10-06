@@ -1,3 +1,5 @@
+import { LINKEDIN_URL } from '@/lib/site';
+import { ArrowUpRight } from '@/app/icons';
 import type { Dictionary } from '@/dictionaries/no';
 import styles from './Experience.module.css';
 
@@ -20,19 +22,12 @@ function JobEntry({ job, currentLabel }: { job: Job; currentLabel: string }) {
         <span>{job.location}</span>
       </p>
 
-      <p className={styles.text}>{job.text}</p>
-
-      <ul className={styles.tags} aria-label="Tags">
-        {job.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
     </li>
   );
 }
 
 export default function Experience({ dict }: { dict: Dictionary }) {
-  const { eyebrow, title, current, items } = dict.experience;
+  const { eyebrow, title, current, linkedin, items } = dict.experience;
 
   return (
     <section id="experience" className="section" aria-labelledby="experience-title">
@@ -49,6 +44,17 @@ export default function Experience({ dict }: { dict: Dictionary }) {
             <JobEntry key={`${job.company}-${job.period}`} job={job} currentLabel={current} />
           ))}
         </ol>
+
+        <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`btn ${styles.more}`}
+        >
+          {linkedin}
+          <span className="visually-hidden"> {dict.common.opensNew}</span>
+          <ArrowUpRight />
+        </a>
       </div>
     </section>
   );

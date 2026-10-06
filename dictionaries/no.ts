@@ -64,6 +64,7 @@ export const no = {
   experience: {
     eyebrow: 'Erfaring',
     title: 'Hvor jeg har jobbet.',
+    linkedin: 'Se hele profilen på LinkedIn',
     current: 'Nåværende',
     items: [
       {
@@ -73,8 +74,6 @@ export const no = {
         period: 'aug. 2026 til nå',
         location: 'Ørsta',
         current: true,
-        text: 'Jeg underviser og følger opp deltakere i Kodehode som skal videre til jobb eller utdanning. Jeg veileder i frontend og webutvikling med HTML, CSS, JavaScript og React, og hjelper også med prosjektarbeid, arbeidslivskompetanse og gode studie- og arbeidsvaner.',
-        tags: ['Frontend', 'Veiledning', 'HTML', 'CSS', 'JavaScript', 'React'],
       },
       {
         role: 'Junior IT-konsulent (praksis)',
@@ -83,8 +82,6 @@ export const no = {
         period: 'mai 2025 til jan. 2026',
         location: 'Hareid, hybrid',
         current: false,
-        text: 'Jeg bidro i utviklingen av interne systemer og en kundeportal, med oppgaver innen frontend, backend og database.',
-        tags: ['React', 'JavaScript', 'Node.js', 'Express', 'SQL', 'PostgreSQL', 'Git'],
       },
     ],
   },

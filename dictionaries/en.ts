@@ -66,6 +66,7 @@ export const en: Dictionary = {
   experience: {
     eyebrow: 'Experience',
     title: "Where I've worked.",
+    linkedin: 'See the full profile on LinkedIn',
     current: 'Current',
     items: [
       {
@@ -75,8 +76,6 @@ export const en: Dictionary = {
         period: 'Aug 2026 to present',
         location: 'Ørsta',
         current: true,
-        text: 'I teach and support participants in Kodehode who are moving on to work or education. I mentor in frontend and web development with HTML, CSS, JavaScript and React, and also help with project work, workplace skills and good study and work habits.',
-        tags: ['Frontend', 'Mentoring', 'HTML', 'CSS', 'JavaScript', 'React'],
       },
       {
         role: 'Junior IT Consultant (internship)',
@@ -85,8 +84,6 @@ export const en: Dictionary = {
         period: 'May 2025 to Jan 2026',
         location: 'Hareid, hybrid',
         current: false,
-        text: 'I contributed to the development of internal systems and a customer portal, with tasks across frontend, backend and database.',
-        tags: ['React', 'JavaScript', 'Node.js', 'Express', 'SQL', 'PostgreSQL', 'Git'],
       },
     ],
   },

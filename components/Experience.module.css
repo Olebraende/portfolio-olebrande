@@ -31,9 +31,9 @@
   background: var(--bg);
 }
 .dot[data-current='true'] {
-  border-color: var(--accent);
-  background: var(--accent);
-  box-shadow: 0 0 0 5px rgba(255, 106, 77, 0.18);
+  border-color: var(--ok);
+  background: var(--ok);
+  box-shadow: 0 0 0 5px rgba(74, 222, 128, 0.18);
 }
 
 .head {
@@ -47,13 +47,13 @@
 }
 .badge {
   padding: 0.15rem 0.7rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--ok);
   border-radius: 999px;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ok);
 }
 
 .meta {
@@ -74,24 +74,6 @@
   font-weight: 550;
 }
 
-.text {
-  margin-top: 1rem;
-  color: var(--text-muted);
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 1.1rem;
-  padding: 0;
-  list-style: none;
-}
-.tags li {
-  padding: 0.2rem 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.74rem;
-  color: var(--text-muted);
+.more {
+  margin-top: clamp(2rem, 4vw, 3rem);
 }
