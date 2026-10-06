@@ -30,7 +30,7 @@ function CodeSnippet() {
           {'  '}cares: [<s>&quot;ytelse&quot;</s>, <s>&quot;a11y&quot;</s>, <s>&quot;SEO&quot;</s>],
         </span>
         <span className={styles.l} style={lineStyle(3)}>
-          {'  '}a11y: <em>100</em>,
+          {'  '}lighthouse: <em>100</em>,
         </span>
         <span className={styles.l} style={lineStyle(4)}>
           {'  '}hotChocolate: <b>true</b>,
