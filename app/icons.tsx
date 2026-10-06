@@ -73,3 +73,9 @@ export const Universal = (p: P) => (
     <path d="M7 10.5c3 1 7 1 10 0M12 11v3.5m0 0-2.5 4.5m2.5-4.5 2.5 4.5" />
   </svg>
 );
+export const AlertCircle = (p: P) => (
+  <svg {...base} {...p}>
+    <circle cx="12" cy="12" r="10" />
+    <path d="M15 9l-6 6M9 9l6 6" />
+  </svg>
+);

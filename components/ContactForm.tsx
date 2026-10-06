@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { Lang } from '@/lib/i18n';
 import type { Dictionary } from '@/dictionaries/no';
-import { Send } from '@/app/icons';
+import { AlertCircle, Send } from '@/app/icons';
 import styles from './ContactForm.module.css';
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
@@ -111,7 +111,11 @@ export default function ContactForm({ lang, dict }: { lang: Lang; dict: Dictiona
         </button>
 
         <p role="status" className={`${styles.msg} ${styles.err}`}>
-          {status === 'error' && c.error}
+          {status === 'error' && (
+            <>
+              <AlertCircle width={18} height={18} /> {c.error}
+            </>
+          )}
         </p>
       </form>
 

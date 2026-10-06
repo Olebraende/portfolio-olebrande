@@ -51,7 +51,14 @@
   font-size: 0.95rem;
 }
 .err {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
   color: #ff8a80;
+}
+.err svg {
+  flex-shrink: 0;
+  margin-top: 0.2em;
 }
 .trap {
   position: absolute;

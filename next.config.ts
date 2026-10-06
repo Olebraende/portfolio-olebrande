@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: '/(.*)', headers: securityHeaders },
+      // Anything not served from the production domain (vercel.app aliases, previews, localhost) stays out of search.
+      {
+        source: '/(.*)',
+        has: [{ type: 'host', value: '(?!(www\\.)?olebrande\\.no$).*' }],
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
       {
         source: '/pics/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
