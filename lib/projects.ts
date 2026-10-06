@@ -95,11 +95,13 @@ export const projects: Project[] = [
         'Voldatunnelen er en uoffisiell informasjonsside om E39 Voldatunnelen, et planlagt vegprosjekt mellom Volda sentrum og Furene i Møre og Romsdal. Siden samler fakta, kart og nyheter om prosjektet, som skal gi bedre trafikksikkerhet og frigjøre sentrum i Volda.',
         'Jeg bygde siden i React med Vite, React Router og CSS Modules. Siden har kart, galleri, tidslinje, nyhetsseksjon og en egen side om prosjektet.',
         'Personvern er tatt på alvor: kartet bruker Leaflet med OpenStreetMap, og Google Analytics lastes først etter eksplisitt samtykke.',
+        'Prosjektet var mitt eget initiativ, og jeg hadde ansvaret for hele løsningen. Det mest krevende var tidsbruken, og jeg er stolt av hvor langt jeg har kommet.',
       ],
       en: [
         'Voldatunnelen is an unofficial information site about the E39 Voldatunnelen, a planned road project between Volda centre and Furene in Møre og Romsdal. It gathers facts, a map and news about the project, which aims to improve road safety and free up the centre of Volda.',
         'I built the site in React with Vite, React Router and CSS Modules. It has a map, a gallery, a timeline, a news section and a page about the project itself.',
         'Privacy is taken seriously: the map uses Leaflet with OpenStreetMap, and Google Analytics only loads after explicit consent.',
+        'The project was my own initiative, and I was responsible for the whole solution. The most demanding part was the time it took, and I am proud of how far I have come.',
       ],
     },
     highlights: {
@@ -115,6 +117,10 @@ export const projects: Project[] = [
         'Google Analytics only after consent',
         'Hosted on Vercel with CSP headers',
       ],
+    },
+    role: {
+      no: 'Design og utvikling, eget initiativ',
+      en: 'Design and development, own initiative',
     },
     year: '2026',
     image: '/pics/voldatunnelen.png',
@@ -134,12 +140,12 @@ export const projects: Project[] = [
       no: [
         'Krønsji er en nettside for en restaurant i Ørsta som serverer fried chicken og mer. Siden viser hele menyen, åpningstider, adresse, sosiale medier og en egen seksjon om allergier.',
         'Menyen kan filtreres på kategorier som burger, wraps, croissants, baguette, falafel, wings og pizza, og du kan søke etter retter. Det er også en kontaktside og en «ring og bestill»-knapp.',
-        'Nettsiden er bygget i ren HTML, CSS og JavaScript uten rammeverk, og ble laget i Kodehode-gruppen hos JobLoop. Statistikk lastes først etter at du har godtatt informasjonskapsler.',
+        'Nettsiden er bygget i ren HTML, CSS og JavaScript uten rammeverk, og ble laget som et Kodehode-prosjekt i gruppe. Jeg jobbet som utvikler. Statistikk lastes først etter at du har godtatt informasjonskapsler.',
       ],
       en: [
         'Krønsji is a website for a restaurant in Ørsta serving fried chicken and more. It shows the full menu, opening hours, address, social media and a dedicated allergens section.',
         'The menu can be filtered by categories such as burger, wraps, croissants, baguette, falafel, wings and pizza, and you can search for dishes. There is also a contact page and a "call to order" button.',
-        'The site is built in plain HTML, CSS and JavaScript without a framework, and was made in the Kodehode group at JobLoop. Analytics only loads after you accept cookies.',
+        'The site is built in plain HTML, CSS and JavaScript without a framework, and was made as a Kodehode group project. I worked as a developer. Analytics only loads after you accept cookies.',
       ],
     },
     highlights: {
@@ -157,6 +163,8 @@ export const projects: Project[] = [
       ],
     },
     year: '2025',
+    role: { no: 'Utvikler, gruppeprosjekt i Kodehode', en: 'Developer, Kodehode group project' },
+    githubUrl: 'https://github.com/Olebraende/kr-nsji',
     archivedReason: {
       no: 'Nettsiden er tatt ned fordi restauranten har lagt ned driften.',
       en: 'The website has been taken down because the restaurant has closed.',
