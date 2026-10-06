@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { LANGS, alternates, getDictionary, href, resolveLang, type Lang } from '@/lib/i18n';
-import { getNeighbours, getProject, projects, type Project } from '@/lib/projects';
+import { getNeighbours, getProject, projectTitle, projects, type Project } from '@/lib/projects';
 import { SITE_URL } from '@/lib/site';
 import type { Dictionary } from '@/dictionaries/no';
 import BackLink from '@/components/BackLink';
@@ -21,13 +21,16 @@ export async function generateMetadata({ params }: PageProps<'/[lang]/prosjekter
   const project = getProject(slug);
   if (!project) notFound();
 
+  const title = projectTitle(project, lang);
   const description = project.description[lang];
   const path = `/prosjekter/${project.slug}`;
   return {
-    title: project.title,
+    title,
     description,
     alternates: alternates(lang, path),
-    openGraph: { title: project.title, description, url: `${SITE_URL}${href(lang, path)}` },
+    openGraph: { title, description, url: `${SITE_URL}${href(lang, path)}` },
+    // Teaser pages stay out of search until the project is real.
+    ...(project.status === 'coming-soon' ? { robots: { index: false, follow: true } } : {}),
   };
 }
 
@@ -83,11 +86,11 @@ function Neighbours({ slug, lang, dict }: { slug: string; lang: Lang; dict: Dict
     <nav className={styles.neighbours} aria-label={dict.projects.pageTitle}>
       <Link href={href(lang, `/prosjekter/${previous.slug}`)} rel="prev">
         <span>← {d.previous}</span>
-        <strong>{previous.title}</strong>
+        <strong>{projectTitle(previous, lang)}</strong>
       </Link>
       <Link href={href(lang, `/prosjekter/${next.slug}`)} rel="next" className={styles.nextLink}>
         <span>{d.next} →</span>
-        <strong>{next.title}</strong>
+        <strong>{projectTitle(next, lang)}</strong>
       </Link>
     </nav>
   );
@@ -101,13 +104,14 @@ export default async function ProjectPage({ params }: PageProps<'/[lang]/prosjek
 
   const dict = getDictionary(lang);
   const d = dict.projects.detail;
+  const title = projectTitle(project, lang);
   const details = project.details?.[lang];
   const highlights = project.highlights?.[lang];
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
-    name: project.title,
+    name: title,
     description: project.description[lang],
     url: `${SITE_URL}${href(lang, `/prosjekter/${project.slug}`)}`,
     author: { '@id': `${SITE_URL}/#person` },
@@ -121,14 +125,14 @@ export default async function ProjectPage({ params }: PageProps<'/[lang]/prosjek
       <section className="page-hero container">
         <BackLink lang={lang} dict={dict} to="/prosjekter" label={d.back} />
         <p className="eyebrow">{dict.projects.eyebrow}</p>
-        <h1>{project.title}</h1>
+        <h1>{title}</h1>
         <p>{project.description[lang]}</p>
         <Links project={project} dict={dict} />
       </section>
 
       <section className={`container ${styles.body}`}>
         <div className={styles.media}>
-          <ProjectMedia project={project} dict={dict} sizes="(min-width: 1180px) 1100px, 100vw" priority />
+          <ProjectMedia project={project} lang={lang} dict={dict} sizes="(min-width: 1180px) 1100px, 100vw" priority />
         </div>
 
         <div className={styles.grid}>
@@ -142,7 +146,7 @@ export default async function ProjectPage({ params }: PageProps<'/[lang]/prosjek
 
             {details && (
               <>
-                <h2>{d.about}</h2>
+                <h2>{project.status === 'coming-soon' ? d.sneakPeek : d.about}</h2>
                 {details.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}

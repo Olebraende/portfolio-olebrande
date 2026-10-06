@@ -16,7 +16,8 @@ type Localized<T> = Record<Lang, T>;
 export type Project = {
   /** URL segment, lower case with dashes. Keep it stable once the page is live. */
   slug: string;
-  title: string;
+  /** A plain string, or one title per language (useful for placeholders). */
+  title: string | Localized<string>;
   /**
    * `live`: finished and online. `coming-soon`: badge, no live link, not counted as built.
    * `archived`: built but no longer online (for example a client that closed). Keeps the card
@@ -173,7 +174,34 @@ export const projects: Project[] = [
     imageSize: [1897, 1075],
     tags: ['javascript', 'responsive', 'ui-ux'],
   },
+  // Teasers. To turn one into a real project, change the slug and title, set status to 'live',
+  // and fill in the fields. To show a sneak peek first, add `image`/`imageSize` and `details`
+  // while it is still 'coming-soon'; the page then shows a "Sneak peek" section.
+  {
+    slug: 'kommer-snart-1',
+    status: 'coming-soon',
+    title: { no: 'Kommer snart #1', en: 'Coming soon #1' },
+    description: {
+      no: 'Et nytt prosjekt er under arbeid. Mer om det her snart.',
+      en: 'A new project is in the works. More about it here soon.',
+    },
+    tags: [],
+  },
+  {
+    slug: 'kommer-snart-2',
+    status: 'coming-soon',
+    title: { no: 'Kommer snart #2', en: 'Coming soon #2' },
+    description: {
+      no: 'Enda et prosjekt er på vei. Følg med.',
+      en: 'Another project is on its way. Stay tuned.',
+    },
+    tags: [],
+  },
 ];
+
+/** Title in the requested language. */
+export const projectTitle = (project: Project, lang: Lang) =>
+  typeof project.title === 'string' ? project.title : project.title[lang];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 

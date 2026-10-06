@@ -7,11 +7,13 @@ const pages = [
   { path: '/', priority: 1, changeFrequency: 'weekly' as const },
   { path: '/prosjekter', priority: 0.8, changeFrequency: 'monthly' as const },
   { path: '/kontakt', priority: 0.8, changeFrequency: 'monthly' as const },
-  ...projects.map((project) => ({
-    path: `/prosjekter/${project.slug}`,
-    priority: 0.6,
-    changeFrequency: 'monthly' as const,
-  })),
+  ...projects
+    .filter((project) => project.status !== 'coming-soon')
+    .map((project) => ({
+      path: `/prosjekter/${project.slug}`,
+      priority: 0.6,
+      changeFrequency: 'monthly' as const,
+    })),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

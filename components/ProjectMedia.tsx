@@ -1,17 +1,20 @@
 import Image from 'next/image';
-import type { Project } from '@/lib/projects';
+import type { Lang } from '@/lib/i18n';
+import { projectTitle, type Project } from '@/lib/projects';
 import type { Dictionary } from '@/dictionaries/no';
 import styles from './ProjectMedia.module.css';
 
 /** Project screenshot, or a drawn placeholder while a project has none yet. */
 export default function ProjectMedia({
   project,
+  lang,
   dict,
   sizes,
   priority = false,
   className,
 }: {
   project: Project;
+  lang: Lang;
   dict: Dictionary;
   sizes: string;
   priority?: boolean;
@@ -21,7 +24,7 @@ export default function ProjectMedia({
     return (
       <div className={`${styles.placeholder} ${className ?? ''}`}>
         <span className={styles.mark} aria-hidden="true">
-          {project.title.slice(0, 1)}
+          {projectTitle(project, lang).slice(0, 1)}
         </span>
         <span>{dict.projects.detail.placeholder}</span>
       </div>

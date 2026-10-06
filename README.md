@@ -78,6 +78,8 @@ Tags shown to visitors are translated in `dictionaries/` under `projects.tags`, 
 
 **Archived:** set `status: 'archived'` for a project that was built but is no longer online (for example a client that closed). Remove its `liveUrl` and optionally add `archivedReason` (translated). The card and page stay, with an "Archived" badge and a note.
 
+**Teasers and sneak peeks:** a `coming-soon` project is a clickable card with a page of its own. The page is kept out of search (`noindex`) and the sitemap. To show a sneak peek, add `image`/`imageSize` and `details` while it is still `coming-soon`, and the page gets a "Sneak peek" section. When the project is ready, change the slug and title and set `status: 'live'`. `title` can be a plain string or one string per language, which is handy for placeholders.
+
 **Remove a project:** delete its entry. Keep slugs stable once a page is live, or add a redirect in `next.config.ts` so old links keep working.
 
 ## Environment variables

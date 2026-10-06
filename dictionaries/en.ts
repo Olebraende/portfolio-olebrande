@@ -123,6 +123,7 @@ export const en: Dictionary = {
       back: 'All projects',
       visit: 'View live',
       code: 'View code',
+      sneakPeek: 'Sneak peek',
       about: 'About the project',
       highlights: 'Highlights',
       tech: 'Tech',

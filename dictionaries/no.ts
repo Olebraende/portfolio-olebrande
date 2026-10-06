@@ -121,6 +121,7 @@ export const no = {
       back: 'Alle prosjekter',
       visit: 'Se live',
       code: 'Se kode',
+      sneakPeek: 'Sneak peek',
       about: 'Om prosjektet',
       highlights: 'Høydepunkter',
       tech: 'Teknologi',
