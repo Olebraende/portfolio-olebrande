@@ -58,7 +58,7 @@ Every project is one entry in `lib/projects.ts`. The card, the detail page at `/
 {
   slug: 'my-project',
   title: 'My project',
-  status: 'live',               // or 'coming-soon'
+  status: 'live',               // or 'coming-soon' or 'archived'
   description: { no: '...', en: '...' },
   details: { no: ['Paragraph one', 'Paragraph two'], en: ['...', '...'] },  // optional
   highlights: { no: ['...'], en: ['...'] },                                  // optional
@@ -75,6 +75,8 @@ Every project is one entry in `lib/projects.ts`. The card, the detail page at `/
 Tags shown to visitors are translated in `dictionaries/` under `projects.tags`, add a label there for any new tag.
 
 **Coming soon:** set `status: 'coming-soon'`. The card gets a badge, the live link is hidden and the project does not count towards the number of finished projects on the front page.
+
+**Archived:** set `status: 'archived'` for a project that was built but is no longer online (for example a client that closed). Remove its `liveUrl` and optionally add `archivedReason` (translated). The card and page stay, with an "Archived" badge and a note.
 
 **Remove a project:** delete its entry. Keep slugs stable once a page is live, or add a redirect in `next.config.ts` so old links keep working.
 

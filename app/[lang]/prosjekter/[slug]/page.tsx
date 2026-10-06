@@ -134,6 +134,11 @@ export default async function ProjectPage({ params }: PageProps<'/[lang]/prosjek
         <div className={styles.grid}>
           <div className={styles.text}>
             {project.status === 'coming-soon' && <p className={styles.soon}>{d.comingSoon}</p>}
+            {project.status === 'archived' && (
+              <p className={styles.soon}>
+                {project.archivedReason?.[lang] ?? ''} {d.archivedNote}
+              </p>
+            )}
 
             {details && (
               <>

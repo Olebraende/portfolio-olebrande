@@ -46,7 +46,7 @@ export default function ProjectCard({
   headingLevel?: 2 | 3;
 }) {
   const Heading = `h${headingLevel}` as const;
-  const comingSoon = project.status === 'coming-soon';
+  const isLive = project.status === 'live';
 
   return (
     <article className={styles.card} data-spot>
@@ -58,7 +58,11 @@ export default function ProjectCard({
           priority={priority}
           className={styles.img}
         />
-        {comingSoon && <span className={styles.badge}>{dict.projects.status['coming-soon']}</span>}
+        {!isLive && (
+          <span className={`${styles.badge} ${project.status === 'archived' ? styles.badgeMuted : ''}`}>
+            {dict.projects.status[project.status]}
+          </span>
+        )}
       </div>
 
       <div className={styles.body}>
@@ -78,7 +82,7 @@ export default function ProjectCard({
         <p className={styles.desc}>{project.description[lang]}</p>
 
         <div className={styles.links}>
-          {project.liveUrl && !comingSoon && (
+          {project.liveUrl && isLive && (
             <ExternalLink url={project.liveUrl} label={dict.common.viewLive} project={project} dict={dict}>
               <ArrowUpRight width={16} height={16} /> {dict.common.viewLive}
             </ExternalLink>

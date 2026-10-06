@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { href, type Lang } from '@/lib/i18n';
-import { projects } from '@/lib/projects';
+import { builtProjectCount } from '@/lib/projects';
 import type { Dictionary } from '@/dictionaries/no';
 import { ArrowRight } from '@/app/icons';
 import HeroCard from './HeroCard';
@@ -40,7 +40,7 @@ export default function Hero({ lang, dict }: { lang: Lang; dict: Dictionary }) {
   const { hero } = dict;
 
   const stats = [
-    { value: projects.filter((p) => p.status === 'live').length, label: hero.stats.projects },
+    { value: builtProjectCount, label: hero.stats.projects },
     { value: monthsSinceStart(), suffix: '+', label: hero.stats.months },
     { value: 100, label: hero.stats.lighthouse },
   ];

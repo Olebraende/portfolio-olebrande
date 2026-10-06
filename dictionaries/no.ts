@@ -116,7 +116,7 @@ export const no = {
     filterLabel: 'Filtrer etter teknologi',
     filterAll: 'Alle',
     empty: 'Ingen prosjekter i denne kategorien ennå.',
-    status: { live: 'Live', 'coming-soon': 'Kommer snart' } as Record<string, string>,
+    status: { live: 'Live', 'coming-soon': 'Kommer snart', archived: 'Avsluttet' } as Record<string, string>,
     detail: {
       back: 'Alle prosjekter',
       visit: 'Se live',
@@ -129,6 +129,7 @@ export const no = {
       status: 'Status',
       previous: 'Forrige prosjekt',
       next: 'Neste prosjekt',
+      archivedNote: 'Nettsiden er ikke lenger i drift. Prosjektet vises her som referanse.',
       comingSoon: 'Dette prosjektet er under arbeid og kommer snart.',
       placeholder: 'Skjermbilde kommer',
     },

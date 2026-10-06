@@ -1,6 +1,6 @@
 import type { Lang } from './i18n';
 
-export type ProjectStatus = 'live' | 'coming-soon';
+export type ProjectStatus = 'live' | 'coming-soon' | 'archived';
 
 type Localized<T> = Record<Lang, T>;
 
@@ -17,7 +17,11 @@ export type Project = {
   /** URL segment, lower case with dashes. Keep it stable once the page is live. */
   slug: string;
   title: string;
-  /** `coming-soon` shows a badge, hides the live link and keeps the page out of "live" counts. */
+  /**
+   * `live`: finished and online. `coming-soon`: badge, no live link, not counted as built.
+   * `archived`: built but no longer online (for example a client that closed). Keeps the card
+   * and page, hides the live link and explains why.
+   */
   status: ProjectStatus;
   /** Short text used on cards and in meta descriptions. */
   description: Localized<string>;
@@ -25,6 +29,8 @@ export type Project = {
   details?: Localized<string[]>;
   highlights?: Localized<string[]>;
   role?: Localized<string>;
+  /** Why an `archived` project is offline. Shown on its detail page. */
+  archivedReason?: Localized<string>;
   year?: string;
   /** Screenshot in `public/pics/`. Without one, a placeholder is drawn. */
   image?: string;
@@ -64,7 +70,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'kroensji',
-    status: 'live',
+    status: 'archived',
     title: 'Krønsji',
     description: {
       no: 'Nettside for restauranten Krønsji med meny, ingredienser, allergener og konsept, i et design som speiler den sprø opplevelsen.',
@@ -72,7 +78,10 @@ export const projects: Project[] = [
     },
     image: '/pics/kroensji.png',
     imageSize: [1897, 1075],
-    liveUrl: 'https://krønsji.no',
+    archivedReason: {
+      no: 'Nettsiden er tatt ned fordi restauranten har lagt ned driften.',
+      en: 'The website has been taken down because the restaurant has closed.',
+    },
     tags: ['javascript', 'responsive', 'ui-ux'],
   },
   {
@@ -132,8 +141,11 @@ export const projects: Project[] = [
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
 
-/** The three highlighted on the front page: the first live projects in the list above. */
-export const featuredProjects = projects.filter((p) => p.status === 'live').slice(0, 3);
+/** The three highlighted on the front page: the first projects in the list that are not coming soon. */
+export const featuredProjects = projects.filter((p) => p.status !== 'coming-soon').slice(0, 3);
+
+/** Projects that have been built, online or not. */
+export const builtProjectCount = projects.filter((p) => p.status !== 'coming-soon').length;
 
 /** Neighbours in list order, wrapping around, for the previous/next links. */
 export function getNeighbours(slug: string) {

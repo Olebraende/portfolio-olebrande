@@ -118,7 +118,7 @@ export const en: Dictionary = {
     filterLabel: 'Filter by technology',
     filterAll: 'All',
     empty: 'No projects in this category yet.',
-    status: { live: 'Live', 'coming-soon': 'Coming soon' },
+    status: { live: 'Live', 'coming-soon': 'Coming soon', archived: 'Archived' },
     detail: {
       back: 'All projects',
       visit: 'View live',
@@ -131,6 +131,7 @@ export const en: Dictionary = {
       status: 'Status',
       previous: 'Previous project',
       next: 'Next project',
+      archivedNote: 'The website is no longer online. The project is shown here for reference.',
       comingSoon: 'This project is a work in progress and coming soon.',
       placeholder: 'Screenshot coming soon',
     },

@@ -137,3 +137,8 @@
   text-transform: uppercase;
   color: var(--accent);
 }
+
+.badgeMuted {
+  border-color: var(--border-strong);
+  color: var(--text-muted);
+}
