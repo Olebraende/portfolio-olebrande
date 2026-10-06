@@ -43,7 +43,7 @@ export const en: Dictionary = {
     stats: {
       projects: 'projects built',
       months: 'months of experience',
-      lighthouse: 'Lighthouse score',
+      lighthouse: 'Lighthouse: a11y, SEO & best practices',
     },
   },
   stack: {
