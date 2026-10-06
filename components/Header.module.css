@@ -52,10 +52,6 @@
   display: grid;
   transition: transform 0.4s var(--ease);
 }
-.logo:hover .mark {
-  transform: rotate(-8deg) scale(1.06);
-}
-
 .nav ul {
   display: flex;
   gap: 0.25rem;
