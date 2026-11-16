@@ -142,6 +142,7 @@ export const no = {
       'ui-ux': 'UI/UX',
       animation: 'Animasjon',
       responsive: 'Responsiv',
+      seo: 'SEO',
       accessibility: 'Tilgjengelighet',
       api: 'API',
     } as Record<string, string>,

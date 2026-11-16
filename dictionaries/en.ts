@@ -144,6 +144,7 @@ export const en: Dictionary = {
       'ui-ux': 'UI/UX',
       animation: 'Animation',
       responsive: 'Responsive',
+      seo: 'SEO',
       accessibility: 'Accessibility',
       api: 'API',
     },

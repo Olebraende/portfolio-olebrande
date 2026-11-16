@@ -130,6 +130,51 @@ export const projects: Project[] = [
     tags: ['react', 'javascript', 'responsive'],
   },
   {
+    slug: 'landscape',
+    status: 'live',
+    title: 'Landscape',
+    description: {
+      no: 'Nettside for den kinesiske restauranten Landscape i Volda med meny, allergener, lunsjmeny og åpningstider, på nynorsk og engelsk.',
+      en: 'Website for the Chinese restaurant Landscape in Volda with menu, allergens, lunch menu and opening hours, in Nynorsk and English.',
+    },
+    details: {
+      no: [
+        'Landscape er en kinesisk restaurant i Hamnegata i Volda som har holdt åpent siden 2003. Jeg har designet og utviklet nettsiden, som viser hele menyen med priser og allergener, nye retter, åpningstider og kontaktinformasjon. Siden finnes på nynorsk og engelsk.',
+        'Lunsjmenyen styres av klokka: den dukker opp på formiddagen med beskjed om når serveringen starter, og viser «Serveres nå» så lenge lunsjen pågår. Øverst på siden står det til enhver tid om restauranten er åpen eller stengt, og når den åpner neste gang. Bestilling skjer på telefon, så ringeknappen er alltid lett tilgjengelig på mobil.',
+        'Nettsiden er bygget for å bli funnet: den har strukturerte data for Google med adresse, åpningstider og hele menyen, delingsbilde som lages automatisk, og sitemap. Besøksstatistikken bruker Vercel Analytics uten informasjonskapsler, så siden trenger ikke samtykkebanner.',
+      ],
+      en: [
+        'Landscape is a Chinese restaurant on Hamnegata in Volda that has been open since 2003. I designed and developed the website, which shows the full menu with prices and allergens, new dishes, opening hours and contact details. The site is available in Nynorsk and English.',
+        'The lunch menu follows the clock: it appears in the morning with a note on when serving starts, and shows "Serving now" for as long as lunch is on. The top of the page always says whether the restaurant is open or closed, and when it next opens. Orders are taken by phone, so the call button is always within easy reach on mobile.',
+        'The site is built to be found: it has structured data for Google with the address, opening hours and full menu, an automatically generated share image and a sitemap. Visitor statistics use Vercel Analytics without cookies, so the site needs no consent banner.',
+      ],
+    },
+    highlights: {
+      no: [
+        'Next.js 16 (App Router), React 19, TypeScript og CSS Modules',
+        'Nynorsk og engelsk med felles innhold fra én kilde',
+        'Live «Åpent nå»-status og lunsjmeny som vises etter klokka',
+        'Allergener med egne ikoner på hver rett',
+        'Strukturerte data (schema.org) for meny og åpningstider i Google',
+        'Statistikk uten informasjonskapsler',
+      ],
+      en: [
+        'Next.js 16 (App Router), React 19, TypeScript and CSS Modules',
+        'Nynorsk and English sharing content from a single source',
+        'Live "Open now" status and a lunch menu that follows the clock',
+        'Allergens with their own icons on every dish',
+        'Structured data (schema.org) for the menu and opening hours in Google',
+        'Analytics without cookies',
+      ],
+    },
+    role: { no: 'Design og utvikling', en: 'Design and development' },
+    year: '2026',
+    image: '/pics/landscape.png',
+    imageSize: [2880, 1800],
+    liveUrl: 'https://www.landscapevolda.no/',
+    tags: ['nextjs', 'typescript', 'responsive', 'seo'],
+  },
+  {
     slug: 'kroensji',
     status: 'archived',
     title: 'Krønsji',
