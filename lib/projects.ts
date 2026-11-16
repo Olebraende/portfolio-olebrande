@@ -223,19 +223,9 @@ export const projects: Project[] = [
   // and fill in the fields. To show a sneak peek first, add `image`/`imageSize` and `details`
   // while it is still 'coming-soon'; the page then shows a "Sneak peek" section.
   {
-    slug: 'kommer-snart-1',
-    status: 'coming-soon',
-    title: { no: 'Kommer snart #1', en: 'Coming soon #1' },
-    description: {
-      no: 'Et nytt prosjekt er under arbeid. Mer om det her snart.',
-      en: 'A new project is in the works. More about it here soon.',
-    },
-    tags: [],
-  },
-  {
     slug: 'kommer-snart-2',
     status: 'coming-soon',
-    title: { no: 'Kommer snart #2', en: 'Coming soon #2' },
+    title: { no: 'Kommer snart', en: 'Coming soon' },
     description: {
       no: 'Enda et prosjekt er på vei. Følg med.',
       en: 'Another project is on its way. Stay tuned.',
