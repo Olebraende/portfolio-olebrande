@@ -128,4 +128,6 @@ Deployments that are not served from `olebrande.no` or `www.olebrande.no` (for e
 
 ## Privacy
 
+Vercel Web Analytics (`@vercel/analytics`, in `app/[lang]/layout.tsx`) counts visitors and page views without cookies, so it runs without consent. Enable it under Analytics in the Vercel project.
+
 Google Analytics only loads after the visitor accepts the consent banner. The choice is stored in `localStorage` and nothing is set before consent.

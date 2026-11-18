@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import { Analytics } from '@vercel/analytics/next';
 import { LANGS, getDictionary, htmlLang, ogLocale, resolveLang } from '@/lib/i18n';
 import { GITHUB_URL, LINKEDIN_URL, SITE_NAME, SITE_URL } from '@/lib/site';
 import Header from '@/components/Header';
@@ -73,6 +74,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
         <main id="main">{children}</main>
         <Footer lang={lang} dict={dict} />
         <Consent dict={dict} />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
