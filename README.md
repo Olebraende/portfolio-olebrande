@@ -96,7 +96,33 @@ Without `RESEND_API_KEY` the form shows its error state.
 
 ## Deployment
 
-Pushing to `main` deploys to production at `olebrande.no` on Vercel. Other branches get preview deployments. `www.olebrande.no` redirects to `olebrande.no`, DNS is managed at the domain registrar.
+Pushing to `main` deploys to production at `olebrande.no` on Vercel. `www.olebrande.no` redirects to `olebrande.no`, DNS is managed at the domain registrar.
+
+### Preview before production
+
+Changes go through the `preview` branch first, so they can be tested live without touching the production site. Vercel builds a preview deployment for every push to a branch other than `main` (and for every pull request).
+
+```bash
+git switch preview
+git merge main                 # start from what is live
+# ...make and commit changes...
+git push origin preview        # Vercel builds a preview deployment
+```
+
+Each preview gets two URLs, both listed in the Vercel dashboard and on the commit in GitHub:
+
+- **Branch URL:** always points to the latest push to `preview`, so it can be bookmarked.
+- **Commit URL:** points to the deployment of one exact commit.
+
+When the preview looks right, ship it:
+
+```bash
+git switch main
+git merge --ff-only preview
+git push origin main           # deploys to olebrande.no
+```
+
+Short-lived branches (for example `feature/...`) get their own preview URLs the same way. Preview deployments use the Preview environment variables in Vercel.
 
 Deployments that are not served from `olebrande.no` or `www.olebrande.no` (for example `*.vercel.app`) send `X-Robots-Tag: noindex, nofollow`, configured in `next.config.ts`.
 
